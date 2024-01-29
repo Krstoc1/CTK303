@@ -1,0 +1,40 @@
+git add CTK303_1/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Da Club- 50 Cent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<img src="music\aset\50.jpg" >
+<body>
+    <div class="container">
+        <div class="button-container">
+            <button id="audioButton" class="button">Click me!</button>
+        </div>
+        <div class="text-box">
+            <h1>In Da Club</h1>
+            <h2>Artist : 50 Cent <br> 
+            Album : Get Rich or Die Tryin' <br> <br>
+            “In Da Club” came together in 2002 when 50 Cent paid his first visit to Dr. Dre. <br> Introduced to each other by mutual friend Eminem, Dre and 50 crafted seven <br> songs in their first-ever studio session, with “In Da Club” obviously being the <br> most important of the seven. <br> </h2>
+        </div>
+        <!--credit to https://americansongwriter.com/meaning-behind-50-cents-birthday-anthem-in-da-club/-->
+        <audio id="audio" src="music\aset\50Cent-InDaClub.mp3"></audio>
+    </div>
+
+   <!--credit to stackoverflow.com for the script-->
+    <script>
+        var audio = document.getElementById('audio');
+        var audioButton = document.getElementById('audioButton');
+
+        audioButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+</body>
+</html>
