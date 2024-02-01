@@ -55,3 +55,7 @@ body {
   height: 20%;
  }
  
+ .pa img {
+    display: block;
+    margin: 0 auto;
+  }
