@@ -51,8 +51,8 @@ body {
   }
 
  img {
-    max-width: 20%;
-  height: 20%;
+    max-width: auto;
+  height: auto;
  }
  
  .pa img {
