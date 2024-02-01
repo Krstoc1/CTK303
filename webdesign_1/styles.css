@@ -1,0 +1,57 @@
+body {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    margin-top: 50px;
+    margin-left: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+    background: url('aset/back.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .header-3d, .footer-3d, .main-content {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateY(15deg); /* Adjust the angles as needed */
+    transition: transform 0.5s ease; /* Adding a transition for a smoother effect */
+  }
+  
+  .header-3d, .footer-3d {
+    background-color: #c04343;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border: 5px solid #000000; /* White border with 2px width */
+    border-radius: 10px; 
+  }
+  
+  .header-3d h1, .header-3d p, .footer-3d p {
+    margin: 0;
+  }
+  
+  .main-content {
+    background-color: #c04343; /* Adjust the color as needed */
+    padding: 20px;
+    border: 5px solid #000000; /* White border with 2px width */
+    border-radius: 10px; 
+  }
+  
+  h2 {
+    color: #fff;
+  }
+  
+  .main-content:hover,
+  .header-3d:hover,
+  .footer-3d:hover {
+    transform: rotateX(0) rotateY(0); /* Reset the transformation on hover */
+  }
+
+ img {
+    max-width: 20%;
+  height: 20%;
+ }
+ 
