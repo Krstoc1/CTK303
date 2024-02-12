@@ -1,0 +1,36 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #movingTriangle {
+    position: relative;
+    animation: moveTriangle 5s infinite linear;
+    width: 50%;
+    height: 50%;
+  }
+  
+  @keyframes moveTriangle {
+    0% {
+      transform: translate(0, 0);
+    }
+    33% {
+      transform: translate(200px, 200px);
+    }
+    66% {
+      transform: translate(-200px, 200px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
