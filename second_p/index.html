@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Portfolio Items -->
+    <div class="portfolio-items">
+      <div class="portfolio-item">
+        <h2>Courses</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <!-- Add more details about your projects -->
+      </div>
+      <div class="portfolio-item">
+        <h2>Skills</h2>
+        <p> </p>
+      </div>
+      <!-- Add more portfolio items as needed -->
+    </div>
+
+    <!-- Profile Image and Text Bubble -->
+    <div class="profile-section">
+      <img alt="Profile Image" class="profile-image" id="peekaboo">
+      <div class="text-bubble">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+      </div>
+    </div>
+
+    <!-- Additional text bubble below -->
+    <div class="text-bubble-below">
+      <h2>Additional Information</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    </div>
+  </div>
+  <script>
+     var logo = document.getElementById("peekaboo");
+     
+     function checkPosition() {
+        var logoTop = logo.getBoundingClientRect().top + window.scrollY; // Use getBoundingClientRect() for accurate position
+        var windowScroll = window.scrollY;
+
+        console.log("logoTop: ", logoTop);
+        console.log("windowScroll: ", windowScroll);
+        
+        if (logoTop - windowScroll < 400) {
+            logo.classList.add("show");
+            logo.setAttribute("src", "aset/profo.jpg"); // Set src attribute when conditions are met
+        } else {
+           logo.classList.remove("show");
+           logo.removeAttribute("src"); // Remove src attribute when conditions are not met
+        }
+     }
+     window.addEventListener("scroll",checkPosition);
+     // Call the function once to check the initial position
+     checkPosition();
+  </script>
+</body>
+</html>

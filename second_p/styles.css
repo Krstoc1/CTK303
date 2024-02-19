@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('aset/back.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.portfolio-item {
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    position: relative; /* Ensure relative positioning for children */
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adjust spacing between portfolio items and profile section */
+}
+
+.profile-image {
+    position: relative; /* Ensure relative positioning */
+    display: inline-block;
+    max-width: 40%; /* Adjust as needed */
+    margin: 20px auto;
+    border-radius: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+.h2-bubble {
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+
+.show {
+    opacity: 1; /* Show when condition met */
+}
+
+#peekaboo {
+    width: 50vw; /* 50% of viewport (window) width */
+    opacity: 0;
+    transform: translate(0,-200px);
+    transition: all 1s;
+}
+
+#peekaboo.show {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.text-bubble {
+    position: absolute; /* Ensure absolute positioning */
+    top: 10px; /* Adjust as needed */
+    left: calc(60%); /* Adjust as needed */
+    width: 200px; /* Adjust as needed */
+    padding: 20px;
+    background-color: #ad1717;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.text-bubble h2 {
+    font-size: 16px; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+.text-bubble-below {
+    margin-top: 20px; /* Adjust as needed */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
