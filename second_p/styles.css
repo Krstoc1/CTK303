@@ -14,7 +14,7 @@ body {
 .portfolio-item {
     width: 80%; /* Adjust as needed */
     margin: 20px auto;
-    background-color: #f9f9f9;
+    background-color: #cfcfcf;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ body {
     position: relative; /* Ensure relative positioning for children */
     width: 80%; /* Adjust as needed */
     margin: 20px auto;
-    background-color: #f9f9f9;
+    background-color: #cfcfcf;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -43,7 +43,7 @@ body {
 }
 .h2-bubble {
     display: inline-block;
-    background-color: #f9f9f9;
+    background-color: #cfcfcf;
     padding: 10px;
     border-radius: 5px;
     margin: 5px;
@@ -73,7 +73,7 @@ body {
     left: calc(60%); /* Adjust as needed */
     width: 200px; /* Adjust as needed */
     padding: 20px;
-    background-color: #ad1717;
+    background-color: #254772;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 1;
@@ -86,9 +86,10 @@ body {
 }
 
 .text-bubble-below {
-    margin-top: 20px; /* Adjust as needed */
+    width: 80%; /* Adjust as needed */
+    margin: 20px auto;
+    background-color: #cfcfcf;
     padding: 20px;
-    background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
