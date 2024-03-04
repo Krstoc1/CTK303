@@ -13,7 +13,7 @@ body {
 }
 
 .portfolio-item {
-   
+    display: inline-block;
     width: 80%; 
     margin: 20px auto;
     background-color: #cfcfcf;
@@ -23,7 +23,7 @@ body {
 }
 
 .profile-section {
-   
+   display: inline-block;
     position: relative; 
     width: 80%;
     margin: 20px auto;
@@ -71,7 +71,7 @@ body {
 }
 
 .text-bubble {
-
+    display: inline-block;
     position: absolute; 
     top: 10px; 
     left: calc(60%); 
@@ -91,7 +91,7 @@ body {
 }
 
 .text-bubble-below {
-   
+   display: inline-block;
     width: 80%; 
     margin: 20px auto;
     background-color: #cfcfcf;
