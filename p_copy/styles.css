@@ -120,7 +120,7 @@ body {
  
 }
 
-@media screen and (min-width: 851px) {
+@media screen and (min-width: 1084px) {
     .container{
         max-width: 851px;
     }
