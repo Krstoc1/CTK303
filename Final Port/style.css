@@ -1,112 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
 body {
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    width: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #222222;
+    display: table; /* Use display: flex; for better alignment */
 }
 
 header {
+    box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space items evenly */
     align-items: center;
-    background: #333;
+    background: #141414;
     color: white;
     padding: 20px 40px;
     position: relative;
+    animation: fadeIn 0.5s ease; /* Add fade-in animation */
 }
 
 .logo h1 {
     margin: 0;
     font-size: 24px;
-    animation: logo-animation 2s infinite alternate;
+    animation: float 3s ease-in-out infinite; /* Slower floating animation */
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    transition: max-height 0.3s ease-out;
-    overflow: hidden; /* Prevent overflow */
-}
-
-.menu li {
-    margin: 0 20px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    transition: color 0.3s;
-}
-
-.menu a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    bottom: -5px;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.menu a:hover {
-    color: #ff4081;
-}
-
-.menu a:hover::before {
-    transform: scaleX(1);
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
 }
 
 .menu-toggle {
-    display: none;
     cursor: pointer;
     font-size: 24px;
-    transition: transform 0.3s ease; /* Smooth transition for menu toggle */
+    margin-left: auto; /* Aligns button to the right */
 }
 
-.menu.active {
-    max-height: 300px; /* Adjust based on your content */
+.nav-links {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* display: flex; */
+    display:inline-block; /* Display menu items in a row */
 }
 
-.menu-toggle.open {
-    transform: rotate(90deg); /* Rotate the toggle icon when the menu is open */
+.nav-links li {
+    margin: 0 20px; 
 }
 
-@keyframes logo-animation {
+.nav-links a {
+    color: grey;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: coral;
+    transform: scale(5); /* Slightly enlarge on hover */
+}
+
+.intro {
+    padding-left: 5.5em;
+    padding-top: 2.5em;
+    color: white;                   /* Change text color to white */
+    font-size: 25px;                /* Increase text size */
+    font-weight: bold;              /* Make text bold */
+    opacity: 0;                     /* Start hidden */
+    transform: translateY(30px);    /* Start slightly lower */
+    animation: rotateIn 1s forwards; /* Apply rotate-in animation */
+    animation-delay: 0.4s;          /* Delay before animation starts */
+}
+
+.name {
+    padding-left: 5.5em;
+    color: coral;                  /* Change text color to purple */
+    font-size: 50px;                /* Increase text size */
+    font-weight: bold;              /* Make text bold */
+    opacity: 0;                     /* Start hidden */
+    transform: translateY(30px);    /* Start slightly lower */
+    animation: rotateIn 1s forwards; /* Apply rotate-in animation */
+    animation-delay: 0.4s;          /* Delay before animation starts */
+}
+
+@keyframes rotateIn {
     0% {
-        transform: translateY(0);
+        opacity: 0;                       /* Fully transparent */
+        transform: translateY(30px) rotateY(-30deg); /* Start lower and rotated back */
+    }
+   
+    100% {
+        opacity: 1;                       /* Fully opaque */
+        transform: translateY(0) rotateY(0); /* End at original position */
+    }
+}
+
+.profo {
+    border-radius: .5em;
+    float: right;  
+    position: relative;      
+    display: block;   
+    margin-top: -200px;      
+    margin-left: auto;      
+    margin-right: 100px;     
+    width: 100%;            
+    max-width: 280px;       
+    height: auto;           
+    box-shadow: -20px 12px 12px rgba(0, 0, 0, 0.5); 
+    animation: floatAnimation 12s ease-in-out infinite; /* Animation applied here */
+}
+
+.profo1{
+    border-radius: 100em;
+    float: center;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    50% {
+        transform: scale(1.1); /* Scale up to 110% */
     }
     100% {
-        transform: translateY(-10px);
+        transform: scale(1); /* Return to original scale */
     }
 }
 
-/* Media Query for Mobile */
-@media screen and (max-width: 850px) {
-    .menu {
+body {
+    height: 200vh;
+}
+
+.sesecion {
+    padding-bottom: 5em;
+    box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
+    padding-right: 3em;
+    Text-align: right;
+    padding-top: 30em; /* Adjust as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Transition effect for fade-in */
+}
+
+.visible {
+    opacity: 1; /* Fully visible when class is added */
+}
+
+.title{
+    padding-right: 6em;
+    animation: float 3s ease-in-out infinite;
+    font-size: 2em;
+    color: white;
+    padding-left: 5.3em;
+}
+
+.About{
+    text-align: left;
+    font-size: 1.5em;
+    color: white;
+    padding-left: 41.3em;
+}
+
+
+.standarT{
+    font-size: 1em;
+    color: white;
+    padding-left: 10.3em;
+}
+
+
+ .standardT{
+    font-size: 1.8em;
+    color: white;
+    padding-left: 4.2em;
+ }
+
+ .fadein {
+    opacity: 0;                     /* Start hidden */
+    transition: opacity 1s ease-in; /* Define the transition for opacity */
+    animation-delay: 2s;            /* Delay before starting the transition */
+}
+
+.fadein.show {
+    opacity: 1; /* Fully visible when the class .show is added */
+}
+
+b {
+    color: coral;
+}
+/* Mobile Styles (for screens 850px and smaller) */
+@media (max-width: 850px) {
+    .nav-links {
+        position: relative;
+        margin-top: .9em;
         display: none; /* Hide the menu by default */
-        flex-direction: column; /* Stack menu items vertically */
+      /*  flex-direction: column; /* Stack vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Below the header */
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-top: 1px solid #ddd;
+        border-radius: 2em;
+        border-top-left-radius: 0em;
+        border-top-right-radius: 0em;
+        z-index: 1000; /* Ensure it is clickable above other elements */
     }
 
-    .menu.active {
-        display: flex; /* Show the menu when active */
+    input[type="checkbox"]:checked ~ nav .nav-links {
+        display: flex; /* Show the menu when the checkbox is checked */
+        animation: slideDown 0.9s ease; /* Add slide-down animation */
     }
 
-    .menu-toggle {
-        display: block; /* Show the menu toggle button */
+    .nav-links li {
+       /* border-bottom: 1px solid #ddd; */
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-20px); /* Move up on entry */
+        transition: opacity 0.9s ease, transform 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked ~ nav .nav-links li {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
     }
 }
 
-/* larger screens */
-@media screen and (min-width: 851px) {
-    .menu {
-        display: flex; /* Always show the menu on larger screens */
-        max-height: none; /* Remove max-height restriction */
+/* Styles for larger screens (851px and larger) */
+@media (min-width: 851px) {
+    .menu-toggle {
+        display: none; /* Hide the clickable button for larger screens */
     }
 
-    .menu-toggle {
-        display: none; /* Hide the toggle button on larger screens */
+    .nav-links {
+        display: flex; /* Show the menu normally */
+        position: static; /* Reset position */
+        flex-direction: row; /* Align items in a row */
+        opacity: 1; /* Ensure items are visible */
+        animation: none; /* Remove animation */
     }
+
+    .nav-links li {
+        opacity: 1; /* Ensure items are visible */
+        transform: translateY(0); /* Reset position */
+    }
+}
+
+/* Add keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }

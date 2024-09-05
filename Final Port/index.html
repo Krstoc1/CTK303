@@ -9,26 +9,52 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Your Logo</h1>
+            <h1>RheedPort2025</h1>
         </div>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-toggle">☰</label>
         <nav>
-            <ul class="menu">
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#projects">Projects</a></li>
+            <ul class="nav-links">
+                <li><a href="#blog">Home</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#projects">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <script>
-        // JavaScript for toggling the menu
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.querySelector('.menu');
+    <p class="intro"> Welcome! This here is-</p>
+    <p class="name"> {Kaleb Stock}</p>
 
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            menuToggle.classList.toggle('open');
+    <div class="fadein">
+        <img class="profo" src="profo1.png" width="280" height="500">
+        <p class="standardT"><b>Web and Game Developer.</b> A well educated senior developer <br> with focused interest in <b>Level Design.</b> </p>
+        <p class="standarT">Current work made in Unity <br> Skilled to learn other engines</p>
+        <p></p>
+    </div>
+
+    <div class="sesecion">
+        <p class="title"> About Me </p>
+        <p class="About"> I am thrilled to have you here! <br>As a Web and Game Designer, <br> I bring a wealth of experience <br> and creativity to the table, <br>focusing on several dynamic fields.</p>
+        <img class="profo1" src="profo.jpg" width="200" height="200">
+    </div>
+
+    <script>
+        // Fade in effect for the .fadein class (already in your code)
+        setTimeout(() => {
+            document.querySelector('.fadein').classList.add('show');
+        }, 1500); // 1500 milliseconds = 1.5 seconds for checkbox toggle
+
+        // Scroll event to show .sesecion
+        window.addEventListener('scroll', function() {
+            const section = document.querySelector('.sesecion');
+            const sectionPosition = section.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 7; // Adjusts the trigger point
+
+            if (sectionPosition < screenPosition) {
+                section.classList.add('visible'); // to make it visible
+            } else {
+                section.classList.remove('visible'); //when not in view
+            }
         });
     </script>
 </body>
