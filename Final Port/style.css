@@ -14,7 +14,8 @@ body {
 
 body {
     background: #222222;
-    display: table; /* Use display: flex; for better alignment */
+    display: flex; /* Changed to flex for better alignment */
+    flex-direction: column; /* Stack children vertically */
 }
 
 header {
@@ -24,14 +25,14 @@ header {
     align-items: center;
     background: #141414;
     color: white;
-    padding: 20px 40px;
+    padding: 5% 10%; /* Padding in percentages */
     position: relative;
     animation: fadeIn 0.5s ease; /* Add fade-in animation */
 }
 
 .logo h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 3vw; /* Font size relative to viewport width */
     animation: float 3s ease-in-out infinite; /* Slower floating animation */
 }
 
@@ -41,7 +42,7 @@ input[type="checkbox"] {
 
 .menu-toggle {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 3vw; /* Font size relative to viewport width */
     margin-left: auto; /* Aligns button to the right */
 }
 
@@ -50,61 +51,61 @@ input[type="checkbox"] {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* display: flex; */
-    display:inline-block; /* Display menu items in a row */
+    display: inline-block; /* Display menu items in a row */
 }
 
 .nav-links li {
-    margin: 0 20px; 
+    margin: 0 2%; /* Margin in percentages for responsiveness */
 }
 
 .nav-links a {
     color: grey;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 4vw; /* Font size relative to viewport width */
     position: relative;
     transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
 }
 
 .nav-links a:hover {
     color: coral;
-    transform: scale(5); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .intro {
-    padding-left: 5.5em;
-    padding-top: 2.5em;
-    color: white;                   /* Change text color to white */
-    font-size: 25px;                /* Increase text size */
-    font-weight: bold;              /* Make text bold */
-    opacity: 0;                     /* Start hidden */
-    transform: translateY(30px);    /* Start slightly lower */
+    padding-left: 5%; /* Adjusted to percentage */
+    padding-top: 5%; /* Adjusted to percentage */
+    color: white; /* Change text color to white */
+    font-size: 5vw; /* Font size relative to viewport width */
+    font-weight: bold; /* Make text bold */
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Start slightly lower */
     animation: rotateIn 1s forwards; /* Apply rotate-in animation */
-    animation-delay: 0.4s;          /* Delay before animation starts */
+    animation-delay: 0.4s; /* Delay before animation starts */
 }
 
 .name {
-    padding-left: 5.5em;
-    color: coral;                  /* Change text color to purple */
-    font-size: 50px;                /* Increase text size */
-    font-weight: bold;              /* Make text bold */
-    opacity: 0;                     /* Start hidden */
-    transform: translateY(30px);    /* Start slightly lower */
+    padding-left: 5%; /* Adjusted to percentage */
+    color: coral; /* Change text color to coral */
+    font-size: 8vw; /* Font size relative to viewport width */
+    font-weight: bold; /* Make text bold */
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Start slightly lower */
     animation: rotateIn 1s forwards; /* Apply rotate-in animation */
-    animation-delay: 0.4s;          /* Delay before animation starts */
+    animation-delay: 0.4s; /* Delay before animation starts */
 }
 
 @keyframes rotateIn {
     0% {
-        opacity: 0;                       /* Fully transparent */
+        opacity: 0; /* Fully transparent */
         transform: translateY(30px) rotateY(-30deg); /* Start lower and rotated back */
     }
    
     100% {
-        opacity: 1;                       /* Fully opaque */
+        opacity: 1; /* Fully opaque */
         transform: translateY(0) rotateY(0); /* End at original position */
     }
 }
+
 
 .profo {
     border-radius: .5em;
@@ -138,9 +139,6 @@ input[type="checkbox"] {
     }
 }
 
-body {
-    height: 200vh;
-}
 
 .sesecion {
     padding-bottom: 5em;
