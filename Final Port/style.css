@@ -106,25 +106,24 @@ input[type="checkbox"] {
     }
 }
 
-
 .profo {
-    border-radius: .5em;
+    border-radius: 1em; /* Changed to em for better scaling */
     float: right;  
     position: relative;      
     display: block;   
-    margin-top: -200px;      
+    margin-top: -20%; /* Adjusted to percentage */
     margin-left: auto;      
-    margin-right: 100px;     
-    width: 100%;            
-    max-width: 280px;       
+    margin-right: 5%; /* Adjusted to percentage */
+    width: 90%; /* Width as a percentage for responsiveness */
+    max-width: 280px; /* Keep max-width as is */
     height: auto;           
-    box-shadow: -20px 12px 12px rgba(0, 0, 0, 0.5); 
+    box-shadow: -5vw 3vw 3vw rgba(0, 0, 0, 0.5); /* Changed to vw for scaling */
     animation: floatAnimation 12s ease-in-out infinite; /* Animation applied here */
 }
 
-.profo1{
-    border-radius: 100em;
-    float: center;
+.profo1 {
+    border-radius: 50%; /* Changed to 50% for consistent circular shape */
+    float: center; /* 'center' is not valid; consider using 'margin: auto;' */
 }
 
 @keyframes floatAnimation {
@@ -139,13 +138,12 @@ input[type="checkbox"] {
     }
 }
 
-
 .sesecion {
-    padding-bottom: 5em;
-    box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
-    padding-right: 3em;
-    Text-align: right;
-    padding-top: 30em; /* Adjust as needed */
+    padding-bottom: 10%; /* Adjusted to percentage */
+    box-shadow: -0px 3vw 3vw rgba(0, 0, 0, 0.5); /* Changed to vw for scaling */
+    padding-right: 5%; /* Adjusted to percentage */
+    text-align: right;
+    padding-top: 30%; /* Adjust as needed */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease; /* Transition effect for fade-in */
 }
@@ -154,39 +152,37 @@ input[type="checkbox"] {
     opacity: 1; /* Fully visible when class is added */
 }
 
-.title{
-    padding-right: 6em;
+.title {
+    padding-right: 10%; /* Adjusted to percentage */
     animation: float 3s ease-in-out infinite;
-    font-size: 2em;
+    font-size: 4vw; /* Font size relative to viewport width */
     color: white;
-    padding-left: 5.3em;
+    padding-left: 5%; /* Adjusted to percentage */
 }
 
-.About{
+.About {
     text-align: left;
-    font-size: 1.5em;
+    font-size: 3vw; /* Font size relative to viewport width */
     color: white;
-    padding-left: 41.3em;
+    padding-left: 25%; /* Adjusted to percentage */
 }
 
-
-.standarT{
-    font-size: 1em;
+.standarT {
+    font-size: 2vw; /* Font size relative to viewport width */
     color: white;
-    padding-left: 10.3em;
+    padding-left: 10%; /* Adjusted to percentage */
 }
 
-
- .standardT{
-    font-size: 1.8em;
+.standardT {
+    font-size: 3vw; /* Font size relative to viewport width */
     color: white;
-    padding-left: 4.2em;
- }
+    padding-left: 10%; /* Adjusted to percentage */
+}
 
- .fadein {
-    opacity: 0;                     /* Start hidden */
+.fadein {
+    opacity: 0; /* Start hidden */
     transition: opacity 1s ease-in; /* Define the transition for opacity */
-    animation-delay: 2s;            /* Delay before starting the transition */
+    animation-delay: 2s; /* Delay before starting the transition */
 }
 
 .fadein.show {
@@ -196,15 +192,15 @@ input[type="checkbox"] {
 b {
     color: coral;
 }
+
 /* Mobile Styles (for screens 850px and smaller) */
 @media (max-width: 850px) {
     .nav-links {
         position: relative;
-        margin-top: .9em;
+        margin-top: 2%; /* Adjusted to percentage */
         display: none; /* Hide the menu by default */
-      /*  flex-direction: column; /* Stack vertically */
         position: absolute; /* Position it absolutely */
-        top: 60px; /* Below the header */
+        top: 10%; /* Below the header */
         left: 0;
         width: 100%;
         background: #fff;
@@ -221,9 +217,8 @@ b {
     }
 
     .nav-links li {
-       /* border-bottom: 1px solid #ddd; */
         opacity: 0; /* Initially hidden */
-        transform: translateY(-20px); /* Move up on entry */
+        transform: translateY(-5%); /* Move up on entry */
         transition: opacity 0.9s ease, transform 0.3s ease;
     }
 
@@ -260,12 +255,26 @@ b {
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-20px); }
+    from { transform: translateY(-20px); } /* Original value for larger screens */
     to { transform: translateY(0); }
 }
 
 @keyframes float {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-10px); } /* Original value for larger screens */
     100% { transform: translateY(0); }
+}
+
+/* Styles for larger screens (851px and larger) */
+@media (min-width: 851px) {
+    @keyframes slideDown {
+        from { transform: translateY(-5%); } /* Adjusted to percentage for larger screens */
+        to { transform: translateY(0); }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-2%); } /* Adjusted to percentage for larger screens */
+        100% { transform: translateY(0); }
+    }
 }
