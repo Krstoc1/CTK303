@@ -14,8 +14,7 @@ body {
 
 body {
     background: #222222;
-    display: flex; /* Changed to flex for better alignment */
-    flex-direction: column; /* Stack children vertically */
+    display: table; /* Use display: flex; for better alignment */
 }
 
 header {
@@ -25,14 +24,14 @@ header {
     align-items: center;
     background: #141414;
     color: white;
-    padding: 5% 10%; /* Padding in percentages */
+    padding: 20px 40px;
     position: relative;
     animation: fadeIn 0.5s ease; /* Add fade-in animation */
 }
 
 .logo h1 {
     margin: 0;
-    font-size: 3vw; /* Font size relative to viewport width */
+    font-size: 24px;
     animation: float 3s ease-in-out infinite; /* Slower floating animation */
 }
 
@@ -42,7 +41,7 @@ input[type="checkbox"] {
 
 .menu-toggle {
     cursor: pointer;
-    font-size: 3vw; /* Font size relative to viewport width */
+    font-size: 24px;
     margin-left: auto; /* Aligns button to the right */
 }
 
@@ -51,79 +50,80 @@ input[type="checkbox"] {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-block; /* Display menu items in a row */
+    /* display: flex; */
+    display:inline-block; /* Display menu items in a row */
 }
 
 .nav-links li {
-    margin: 0 2%; /* Margin in percentages for responsiveness */
+    margin: 0 20px; 
 }
 
 .nav-links a {
     color: grey;
     text-decoration: none;
-    font-size: 4vw; /* Font size relative to viewport width */
+    font-size: 25px;
     position: relative;
     transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
 }
 
 .nav-links a:hover {
     color: coral;
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(5); /* Slightly enlarge on hover */
 }
 
 .intro {
-    padding-left: 5%; /* Adjusted to percentage */
-    padding-top: 5%; /* Adjusted to percentage */
-    color: white; /* Change text color to white */
-    font-size: 5vw; /* Font size relative to viewport width */
-    font-weight: bold; /* Make text bold */
-    opacity: 0; /* Start hidden */
-    transform: translateY(30px); /* Start slightly lower */
+    padding-left: 5.5em;
+    padding-top: 2.5em;
+    color: white;                   /* Change text color to white */
+    font-size: 25px;                /* Increase text size */
+    font-weight: bold;              /* Make text bold */
+    opacity: 0;                     /* Start hidden */
+    transform: translateY(30px);    /* Start slightly lower */
     animation: rotateIn 1s forwards; /* Apply rotate-in animation */
-    animation-delay: 0.4s; /* Delay before animation starts */
+    animation-delay: 0.4s;          /* Delay before animation starts */
 }
 
 .name {
-    padding-left: 5%; /* Adjusted to percentage */
-    color: coral; /* Change text color to coral */
-    font-size: 8vw; /* Font size relative to viewport width */
-    font-weight: bold; /* Make text bold */
-    opacity: 0; /* Start hidden */
-    transform: translateY(30px); /* Start slightly lower */
+    padding-left: 5.5em;
+    color: coral;                  /* Change text color to purple */
+    font-size: 50px;                /* Increase text size */
+    font-weight: bold;              /* Make text bold */
+    opacity: 0;                     /* Start hidden */
+    transform: translateY(30px);    /* Start slightly lower */
     animation: rotateIn 1s forwards; /* Apply rotate-in animation */
-    animation-delay: 0.4s; /* Delay before animation starts */
+    animation-delay: 0.4s;          /* Delay before animation starts */
 }
 
 @keyframes rotateIn {
     0% {
-        opacity: 0; /* Fully transparent */
+        opacity: 0;                       /* Fully transparent */
         transform: translateY(30px) rotateY(-30deg); /* Start lower and rotated back */
     }
    
     100% {
-        opacity: 1; /* Fully opaque */
+        opacity: 1;                       /* Fully opaque */
         transform: translateY(0) rotateY(0); /* End at original position */
     }
 }
 
 .profo {
-    border-radius: 1em; /* Changed to em for better scaling */
+    border-radius: .5em;
     float: right;  
     position: relative;      
     display: block;   
-    margin-top: -20%; /* Adjusted to percentage */
+    margin-top: -200px;      
     margin-left: auto;      
-    margin-right: 5%; /* Adjusted to percentage */
-    width: 90%; /* Width as a percentage for responsiveness */
-    max-width: 280px; /* Keep max-width as is */
+    margin-right: 100px;     
+    width: 100%;            
+    max-width: 280px;       
     height: auto;           
-    box-shadow: -5vw 3vw 3vw rgba(0, 0, 0, 0.5); /* Changed to vw for scaling */
+    box-shadow: -20px 12px 12px rgba(0, 0, 0, 0.5); 
     animation: floatAnimation 12s ease-in-out infinite; /* Animation applied here */
 }
 
-.profo1 {
-    border-radius: 50%; /* Changed to 50% for consistent circular shape */
-    float: center; /* 'center' is not valid; consider using 'margin: auto;' */
+.profo1{
+    border-radius: 100em;
+    float: center;
 }
 
 @keyframes floatAnimation {
@@ -138,12 +138,13 @@ input[type="checkbox"] {
     }
 }
 
+
 .sesecion {
-    padding-bottom: 10%; /* Adjusted to percentage */
-    box-shadow: -0px 3vw 3vw rgba(0, 0, 0, 0.5); /* Changed to vw for scaling */
-    padding-right: 5%; /* Adjusted to percentage */
-    text-align: right;
-    padding-top: 30%; /* Adjust as needed */
+    padding-bottom: 5em;
+    box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
+    padding-right: 3em;
+    Text-align: right;
+    padding-top: 30em; /* Adjust as needed */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease; /* Transition effect for fade-in */
 }
@@ -152,37 +153,39 @@ input[type="checkbox"] {
     opacity: 1; /* Fully visible when class is added */
 }
 
-.title {
-    padding-right: 10%; /* Adjusted to percentage */
+.title{
+    padding-right: 6em;
     animation: float 3s ease-in-out infinite;
-    font-size: 4vw; /* Font size relative to viewport width */
+    font-size: 2em;
     color: white;
-    padding-left: 5%; /* Adjusted to percentage */
+    padding-left: 5.3em;
 }
 
-.About {
+.About{
     text-align: left;
-    font-size: 3vw; /* Font size relative to viewport width */
+    font-size: 1.5em;
     color: white;
-    padding-left: 25%; /* Adjusted to percentage */
+    padding-left: 41.3em;
 }
 
-.standarT {
-    font-size: 2vw; /* Font size relative to viewport width */
+
+.standarT{
+    font-size: 1em;
     color: white;
-    padding-left: 10%; /* Adjusted to percentage */
+    padding-left: 10.3em;
 }
 
-.standardT {
-    font-size: 3vw; /* Font size relative to viewport width */
-    color: white;
-    padding-left: 10%; /* Adjusted to percentage */
-}
 
-.fadein {
-    opacity: 0; /* Start hidden */
+ .standardT{
+    font-size: 1.8em;
+    color: white;
+    padding-left: 4.2em;
+ }
+
+ .fadein {
+    opacity: 0;                     /* Start hidden */
     transition: opacity 1s ease-in; /* Define the transition for opacity */
-    animation-delay: 2s; /* Delay before starting the transition */
+    animation-delay: 2s;            /* Delay before starting the transition */
 }
 
 .fadein.show {
@@ -192,15 +195,15 @@ input[type="checkbox"] {
 b {
     color: coral;
 }
-
 /* Mobile Styles (for screens 850px and smaller) */
 @media (max-width: 850px) {
     .nav-links {
         position: relative;
-        margin-top: 2%; /* Adjusted to percentage */
+        margin-top: .9em;
         display: none; /* Hide the menu by default */
+      /*  flex-direction: column; /* Stack vertically */
         position: absolute; /* Position it absolutely */
-        top: 10%; /* Below the header */
+        top: 60px; /* Below the header */
         left: 0;
         width: 100%;
         background: #fff;
@@ -217,8 +220,9 @@ b {
     }
 
     .nav-links li {
+       /* border-bottom: 1px solid #ddd; */
         opacity: 0; /* Initially hidden */
-        transform: translateY(-5%); /* Move up on entry */
+        transform: translateY(-20px); /* Move up on entry */
         transition: opacity 0.9s ease, transform 0.3s ease;
     }
 
@@ -255,26 +259,12 @@ b {
 }
 
 @keyframes slideDown {
-    from { transform: translateY(-20px); } /* Original value for larger screens */
+    from { transform: translateY(-20px); }
     to { transform: translateY(0); }
 }
 
 @keyframes float {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } /* Original value for larger screens */
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
-}
-
-/* Styles for larger screens (851px and larger) */
-@media (min-width: 851px) {
-    @keyframes slideDown {
-        from { transform: translateY(-5%); } /* Adjusted to percentage for larger screens */
-        to { transform: translateY(0); }
-    }
-
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-2%); } /* Adjusted to percentage for larger screens */
-        100% { transform: translateY(0); }
-    }
 }
