@@ -206,17 +206,33 @@ b {
 }
 /* Mobile Styles (for screens 850px and smaller) */
 @media (max-width: 850px) {
-    /* Adjust the header */
-    header {
-        padding: 1em; /* Adjust padding as needed */
-        font-size: 1.2em; /* Adjust font size as needed */
+
+    *, *:before, *:after {
+        box-sizing: border-box; /* Include padding and border in elements' total width */
     }
 
+    html {
+        width: 100%; /* Ensure full width */
+        max-width: 100%; /* Prevent constraining */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Adjust the header */
+
+    .fadein{
+      margin-left: -5em;
+    }
+
+    header {
+        margin-right: 10em; /* Reduce padding for a smaller header */
+        font-size: 1em; /* Adjust font size for smaller screen */
+    }
+    
     /* Ensure the body shrinks with the screen */
     body {
+        mnargin-left: -5em;
         flex-direction:column;
         width: 100%; /* Use 100% width to occupy full screen */
-        margin: 0; 
         padding: 0;
         font-size: 16px; /* Base font size */
         line-height: 1.5; /* Improve readability */
@@ -224,9 +240,11 @@ b {
 
     /* Adjust the .profo class for the image */
     .profo {
-        width: 170px; /* Make the image responsive */
-        height: 300px; /* Maintain aspect ratio */
-        display: block; /* Ensure it behaves like a block element */
+        margin-left: -5em;
+        margin-bottom: -50em;
+        width: 130px; /* Make the image responsive */
+        height: 260px; /* Maintain aspect ratio */
+ /* Ensure it behaves like a block element */
     }
 
     .nav-links {
@@ -244,9 +262,11 @@ b {
         border-top-right-radius: 0em;
         z-index: 1000; /* Ensure it is clickable above other elements */
     }
+
     input[type="checkbox"]:checked ~ nav .nav-links {
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Stack vertically */
+        display: flex; /* Use flexbox for the layout */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width for the menu */
         animation: slideDown 0.9s ease; /* Add slide-down animation */
     }
 
