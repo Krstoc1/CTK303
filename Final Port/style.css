@@ -113,7 +113,7 @@ input[type="checkbox"] {
     margin-top: -200px;      
     margin-left: auto;      
     margin-right: 100px;     
-   /* width: 100%; */           
+    width: 100%;           
     max-width: 280px;       
     height: auto;           
     box-shadow: -20px 12px 12px rgba(0, 0, 0, 0.5); 
@@ -196,11 +196,32 @@ b {
 }
 /* Mobile Styles (for screens 850px and smaller) */
 @media (max-width: 850px) {
+    /* Adjust the header */
+    header {
+        padding: 1em; /* Adjust padding as needed */
+        font-size: 1.2em; /* Adjust font size as needed */
+    }
+
+    /* Ensure the body shrinks with the screen */
+    body {
+        width: 100%; /* Use 100% width to occupy full screen */
+        margin: 0; 
+        padding: 0;
+        font-size: 16px; /* Base font size */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    /* Adjust the .profo class for the image */
+    .profo {
+        width: 170px; /* Make the image responsive */
+        height: 300px; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves like a block element */
+    }
+
     .nav-links {
         position: relative;
-        margin-top: .9em;
+        margin-top: 0.9em;
         display: none; /* Hide the menu by default */
-      /*  flex-direction: column; /* Stack vertically */
         position: absolute; /* Position it absolutely */
         top: 60px; /* Below the header */
         left: 0;
@@ -219,7 +240,6 @@ b {
     }
 
     .nav-links li {
-       /* border-bottom: 1px solid #ddd; */
         opacity: 0; /* Initially hidden */
         transform: translateY(-20px); /* Move up on entry */
         transition: opacity 0.9s ease, transform 0.3s ease;
@@ -234,15 +254,15 @@ b {
 /* Styles for larger screens (851px and larger) */
 @media (min-width: 851px) {
     .menu-toggle {
-        display: none; /* Hide the clickable button for larger screens */
+        display: none; 
     }
 
     .nav-links {
-        display: flex; /* Show the menu normally */
-        position: static; /* Reset position */
-        flex-direction: row; /* Align items in a row */
-        opacity: 1; /* Ensure items are visible */
-        animation: none; /* Remove animation */
+        display: flex; 
+        position: static;
+        flex-direction: row; 
+        opacity: 1; 
+        animation: none; 
     }
 
     .nav-links li {
