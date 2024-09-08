@@ -4,17 +4,27 @@
     box-sizing: border-box;
 }
 
-html,
+/*html,
 body {
     font-family: 'Nunito', sans-serif;
     height: auto;
     width: auto;
-}
+} */
 
 body {
+    font-family: 'Nunito', sans-serif;
     background: #222222;
     display: table; /* Use display: flex; for better alignment */
 }
+
+html, body {
+    width: 100%; /* Allow full width */
+    height: 100%; /* Allow full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+
 
 header {
     box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
@@ -204,6 +214,7 @@ b {
 
     /* Ensure the body shrinks with the screen */
     body {
+        flex-direction:column;
         width: 100%; /* Use 100% width to occupy full screen */
         margin: 0; 
         padding: 0;
@@ -233,9 +244,9 @@ b {
         border-top-right-radius: 0em;
         z-index: 1000; /* Ensure it is clickable above other elements */
     }
-
     input[type="checkbox"]:checked ~ nav .nav-links {
-        display: flex; /* Show the menu when the checkbox is checked */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack vertically */
         animation: slideDown 0.9s ease; /* Add slide-down animation */
     }
 
