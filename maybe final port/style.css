@@ -1,8 +1,9 @@
 /* Base Styles */
 html, body {
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background: #222222;
 }
 
 header {
@@ -17,10 +18,27 @@ header {
     animation: fadeIn 0.5s ease; /* Add fade-in animation */
 }
 
+/* */
 .logo h1 {
+    padding-top: .5em;
+    padding-bottom: .2em;
     margin: 0; /* Remove default margin */
     font-size: 1.5em; /* Font size for header */
+    animation: float 10s ease-in-out infinite;
 }
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-10px); /* Float up */
+    }
+    100% {
+        transform: translateY(0); /* Return to start */
+    }
+}
+/* */
 
 /* Hide the checkbox */
 input[type="checkbox"] {
@@ -37,38 +55,145 @@ input[type="checkbox"] {
 
 /* Navigation Links */
 .nav-links {
+    
     display: flex; /* Show menu as flex container */
     flex-direction: row; /* Align links horizontally */
     list-style: none; /* Remove bullet points */
     margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    padding-left: 3em; /* Remove default padding */
+}
+
+.nav-links a {
+    padding-right: 2em;
+    color: grey;
+    text-decoration: none;
+    font-size: 25px;
+    transition: color 0.3s, transform 0.8s; /* Add transition for hover effect */
+}
+/* */
+.name {
+    padding-left: 3.5em;
+    padding-top: -3em;
+    color: coral;                  /* Change text color to purple */
+    font-size: 60px;                /* Increase text size */
+    font-weight: bold;              /* Make text bold */
+    opacity: 0;                     /* Start hidden */
+    transform: translateY(30px);    /* Start slightly lower */
+    animation: rotateIn 1s forwards; /* Apply rotate-in animation */
+    animation-delay: 0.4s;          /* Delay before animation starts */
+}
+
+.intro {
+    padding-left: 5em;
+    padding-top: 3em;
+    color: white;                   /* Change text color to white */
+    font-size: 25px;                /* Increase text size */
+    font-weight: bold;              /* Make text bold */
+    opacity: 0;                     /* Start hidden */
+    transform: translateY(30px);    /* Start slightly lower */
+    animation: rotateIn 1s forwards; /* Apply rotate-in animation */
+    animation-delay: 0.4s;          /* Delay before animation starts */
+}
+
+@keyframes rotateIn {
+    0% {
+        opacity: 0;                       /* Fully transparent */
+        transform: translateY(30px) rotateY(-30deg); /* Start lower and rotated back */
+    }
+   
+    100% {
+        opacity: 1;                       /* Fully opaque */
+        transform: translateY(0) rotateY(0); /* End at original position */
+    }
+}
+/* */
+
+/* */
+.standarT{
+    font-size: 1em;
+    color: white;
+  
+}
+
+
+ .standardT{
+    font-size: 1.8em;
+    color: white;
+    
+ }
+
+.fadein {
+    padding-top: 10em;
+    opacity: 0;                     /* Start hidden */
+    transition: opacity 1s ease-in; /* Define the transition for opacity */
+    animation-delay: 2s;            /* Delay before starting the transition */
+}
+
+.fadein.show {
+    opacity: 1; /* Fully visible when the class .show is added */
+}
+/* */
+
+.fadein::after {
+    content: ""; /* Clearfix */
+    display: table; /* Display as a block */
+    clear: both; /* Clear floats */
+}
+
+/* */
+.profo {
+    border-radius: .5em;
+    float: right;  
+    position: relative;      
+    display: block;   
+    margin-top: -450px;      
+    margin-left: -200px;      
+    margin-right: 100px;     
+    width: 100%;           
+    min-width: 13em;       
+    max-height: 360px;            
+    box-shadow: -20px 12px 12px rgba(0, 0, 0, 0.5); 
+    animation: floatAnimation 12s ease-in-out infinite; /* Animation applied here */
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    50% {
+        transform: scale(1.1); /* Scale up to 110% */
+    }
+    100% {
+        transform: scale(1); /* Return to original scale */
+    }
+}
+/* */
+
+
+.nav-links a:hover {
+    color: coral;
+    transform: scale(5); /* Slightly enlarge on hover */
 }
 
 input[type="checkbox"]:checked ~ nav .nav-links {
     display: flex; /* Show menu when checked */
     position: absolute; /* Position menu as absolute */
-    background-color: coral; /* Background color */
+    background-color: rgb(14, 14, 14); /* Background color */
     top: 60px; /* Adjust position below header */
     left: 0; /* Align to the left */
     width: 100%; /* Full width */
 }
 
-/* Main Content Styles */
+/* Main Content Styles 
 .intro, .name, .standardT, .standarT {
-    text-align: center; /* Center text */
-    margin: 1em 0; /* Margin for spacing */
-}
+    text-align: center; /* Center text 
+    margin: 1em 0; /* Margin for spacing 
+} */
 
 .fadein {
     display: flex; /* Use flexbox for layout */
     flex-direction: row; /* Align items horizontally */
     align-items: center; /* Center items vertically */
-}
-
-.profo {
-    width: 130px; /* Fixed width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 1em; /* Adjust margin for spacing */
 }
 
 .sesecion {

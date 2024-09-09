@@ -38,7 +38,7 @@ header {
     animation: fadeIn 0.5s ease; /* Add fade-in animation */
 }
 
-.logo h1 {
+.logo {
     margin: 0;
     font-size: 24px;
     animation: float 3s ease-in-out infinite; /* Slower floating animation */
@@ -71,7 +71,6 @@ input[type="checkbox"] {
     color: grey;
     text-decoration: none;
     font-size: 25px;
-    position: relative;
     transition: color 0.3s, transform 0.3s; /* Add transition for hover effect */
 }
 
