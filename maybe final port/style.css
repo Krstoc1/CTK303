@@ -125,7 +125,6 @@ input[type="checkbox"] {
  }
 
 .fadein {
-    padding-top: 13em;
     opacity: 0;                     /* Start hidden */
     transition: opacity 1s ease-in; /* Define the transition for opacity */
     animation-delay: 2s;            /* Delay before starting the transition */
@@ -148,10 +147,7 @@ input[type="checkbox"] {
     border-radius: .5em;
     float: right;  
     position: relative;      
-    display: block;   
-    margin-top: -490px;      
-    margin-left: 600px;      
-    margin-right: 100px;     
+    display: block;       
     width: 100%;           
     min-width: 13em;       
     max-height: 360px;            
@@ -195,63 +191,107 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     margin: 1em 0; /* Margin for spacing 
 } */
 
-.fadein {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-}
 
 .sesecion {
     text-align: center; /* Center text */
     margin: 2em 0; /* Margin for spacing */
 }
 
+
+
 /* Media Query for Mobile Screens */
 
+@media (max-width: 795px) {
+    .re {
+        text-align: left;
+    }
+    .intro {
+        padding-left: 0.5em;
+        margin-top: -1em;
+    }
+    .name {
+        font-size: 50px;
+        margin-left: -0.6em;
+        margin-top: 0.2em;
+    }
+    .fadein {
+        margin-top: -7em;
+    }
+    header {
+        flex-direction: row; /* Keep in row for mobile */
+        align-items: center; /* Align items vertically in the center */
+        justify-content: space-between; /* Space out items for better alignment */
+    }
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+    .nav-links {
+        display: none; /* Hide links initially */
+    }
+    
+    .fadein::after {
+        display: block; /* Display as a block */
+    }
 
-@media (max-width: 1179px) {
+    .standarT {
+        font-size: 17px;
+        margin-top: -12em;
+        padding-left: 3em;
+    }
+    .standardT {
+        font-size: 19px;
+        margin-top: 31em;
+        padding-left: 1em;
+        padding-bottom: 12em;
+    }
+    .profo {
+        margin-top: -600px; 
+        margin-left: auto;          /* Align to the left */
+        margin-right: 7em;         /* Space on the right */
+        width: 20px;               /* Width for mobile */
+    }
+}
+
+
+/* Media Query for Medium Screens */
+@media (min-width: 796px) and (max-width: 1179px) {
 
     .re {
         text-align: left;
     }
-    .intro{
+    .intro {
         padding-left: .5em;
-    margin-top: -1em;
+        margin-top: -1em;
     }
-    .name{
-        margin-left: -.3em;
-    margin-top: .2em;
+    .name {
+        font-size: 70px;
+        margin-left: -.6em;
+        margin-top: .2em;
     }
-
-    .fadein{
-        margin-top: -7em;
-    }
-
-    header {
-        flex-direction: row; /* Keep in row for mobile */
-        align-items: center; /* Align items vertically in the center */
-    }
-
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-    }
-
     .nav-links {
-        display: none; /* Hide links initially */
+        display: flex; /* Show navigation links on desktop */
+        flex-direction: row; /* Ensure horizontal alignment */
     }
-
+    .nav-links li {
+        margin-left: 20px; /* Space between nav items */
+    }
+    .standarT {
+        font-size: 17px;
+        margin-top: -12em;
+        padding-left: 3em;
+    }
+    .standardT {
+        font-size: 19px;
+        margin-top: -2em;
+        padding-left: 1em;
+        padding-bottom: 12em;
+    }
     .profo {
-        width: 80px; /* Smaller width for mobile */
-        margin: 0 1em; /* Adjust margin */
-    }
-
-    .standardT, .standarT {
-        font-size: 0.9em; /* Smaller font size for text */
-    }
-
-    .sesecion {
-        margin: 1em 0; /* Adjust margin */
-    }
+        margin-top: -300px;      
+        margin-left: auto;          /* Set margin-left to 0 to align to the left */
+        margin-right: 2em;      /* Set margin-right to auto to take up remaining space */
+        width: 80px;             /* Default width for desktop */
+    }    
 }
 
 /* Media Query for Desktop Screens */
@@ -262,24 +302,30 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     }
     .nav-links li {
         margin-left: 20px; /* Space between nav items */
-    }
+
     
-    .standarT{
-        margin-top: -5em;
-        margin-left: -45em;
-        font-size: 1em;
-        color: white;
-      
+
     }
-    
-     .standardT{
-        padding-left: 5em;
-        margin-top: -15em;
-        font-size: 1.8em;
-        color: white;
+
+    .fadein::after {
         
-     }
-     .profo {
+        display:block; /* Display as a block */
+        
+    }
+    
+    .standarT {
+        margin-top: -20em;
+        padding-left: 9em;
+    }
+    .standardT {
+        margin-top: -2em;
+        padding-left: 3em;
+        padding-bottom: 12em;
+    }
+    .profo {
+        margin-top: -400px;      
+        margin-left: 700px;      
+        margin-right: 90px; 
         width: 130px; /* Default width for desktop */
     }
 }
