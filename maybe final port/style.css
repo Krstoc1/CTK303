@@ -1,0 +1,120 @@
+/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
+    display: flex; /* Keep as flex for horizontal layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically in the center */
+    background: #141414;
+    color: white;
+    padding: 10px 10px;
+    position: relative;
+    animation: fadeIn 0.5s ease; /* Add fade-in animation */
+}
+
+.logo h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5em; /* Font size for header */
+}
+
+/* Hide the checkbox */
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+/* Toggle Button Styles */
+.menu-toggle {
+    margin-left: auto; /* Align toggle button to the right */
+    cursor: pointer; /* Change cursor on hover */
+    font-size: 2em; /* Size of the toggle button */
+    display: none; /* Hide on desktop */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; /* Show menu as flex container */
+    flex-direction: row; /* Align links horizontally */
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+input[type="checkbox"]:checked ~ nav .nav-links {
+    display: flex; /* Show menu when checked */
+    position: absolute; /* Position menu as absolute */
+    background-color: coral; /* Background color */
+    top: 60px; /* Adjust position below header */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+}
+
+/* Main Content Styles */
+.intro, .name, .standardT, .standarT {
+    text-align: center; /* Center text */
+    margin: 1em 0; /* Margin for spacing */
+}
+
+.fadein {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.profo {
+    width: 130px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 1em; /* Adjust margin for spacing */
+}
+
+.sesecion {
+    text-align: center; /* Center text */
+    margin: 2em 0; /* Margin for spacing */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 850px) {
+    header {
+        flex-direction: row; /* Keep in row for mobile */
+        align-items: center; /* Align items vertically in the center */
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links initially */
+    }
+
+    .profo {
+        width: 100px; /* Smaller width for mobile */
+        margin: 0 1em; /* Adjust margin */
+    }
+
+    .standardT, .standarT {
+        font-size: 0.9em; /* Smaller font size for text */
+    }
+
+    .sesecion {
+        margin: 1em 0; /* Adjust margin */
+    }
+}
+
+/* Media Query for Desktop Screens */
+@media (min-width: 851px) {
+    .nav-links {
+        display: flex; /* Show navigation links on desktop */
+        flex-direction: row; /* Ensure horizontal alignment */
+    }
+    .nav-links li {
+        margin-left: 20px; /* Space between nav items */
+    }
+    .profo {
+        width: 130px; /* Default width for desktop */
+    }
+}
