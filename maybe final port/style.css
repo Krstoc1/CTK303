@@ -210,12 +210,12 @@ input[type="checkbox"]:checked ~ nav .nav-links {
         text-align: left;
     }
     .intro{
-        padding-left: 1em;
-    padding-top: -5em;
+        padding-left: .5em;
+    margin-top: -1em;
     }
     .name{
-        padding-left: 1em;
-    padding-top: 0em;
+        padding-left: .7em;
+    margin-top: .2em;
     }
     header {
         flex-direction: row; /* Keep in row for mobile */
