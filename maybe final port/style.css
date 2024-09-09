@@ -74,10 +74,10 @@ input[type="checkbox"] {
 
 
 .name {
-    padding-left: 3.5em;
-    padding-top: -3em;
+    padding-left: .7em;
+    margin-top: -.2em;
     color: coral;                  /* Change text color to purple */
-    font-size: 60px;                /* Increase text size */
+    font-size: 120px;                /* Increase text size */
     font-weight: bold;              /* Make text bold */
     opacity: 0;                     /* Start hidden */
     transform: translateY(30px);    /* Start slightly lower */
@@ -125,10 +125,11 @@ input[type="checkbox"] {
  }
 
 .fadein {
-    padding-top: 10em;
+    padding-top: 13em;
     opacity: 0;                     /* Start hidden */
     transition: opacity 1s ease-in; /* Define the transition for opacity */
     animation-delay: 2s;            /* Delay before starting the transition */
+    padding-bottom: 20em;
 }
 
 .fadein.show {
@@ -149,7 +150,7 @@ input[type="checkbox"] {
     position: relative;      
     display: block;   
     margin-top: -490px;      
-    margin-left: -200px;      
+    margin-left: 600px;      
     margin-right: 100px;     
     width: 100%;           
     min-width: 13em;       
@@ -178,6 +179,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked ~ nav .nav-links {
+    padding-top: .5em;
+    padding-bottom: .5em;
     display: flex; /* Show menu when checked */
     position: absolute; /* Position menu as absolute */
     background-color: rgb(14, 14, 14); /* Background color */
@@ -204,7 +207,9 @@ input[type="checkbox"]:checked ~ nav .nav-links {
 }
 
 /* Media Query for Mobile Screens */
-@media (max-width: 850px) {
+
+
+@media (max-width: 1179px) {
 
     .re {
         text-align: left;
@@ -214,9 +219,14 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     margin-top: -1em;
     }
     .name{
-        padding-left: .7em;
+        margin-left: -.3em;
     margin-top: .2em;
     }
+
+    .fadein{
+        margin-top: -7em;
+    }
+
     header {
         flex-direction: row; /* Keep in row for mobile */
         align-items: center; /* Align items vertically in the center */
@@ -231,7 +241,7 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     }
 
     .profo {
-        width: 100px; /* Smaller width for mobile */
+        width: 80px; /* Smaller width for mobile */
         margin: 0 1em; /* Adjust margin */
     }
 
@@ -245,7 +255,7 @@ input[type="checkbox"]:checked ~ nav .nav-links {
 }
 
 /* Media Query for Desktop Screens */
-@media (min-width: 851px) {
+@media (min-width: 1180px) {
     .nav-links {
         display: flex; /* Show navigation links on desktop */
         flex-direction: row; /* Ensure horizontal alignment */
@@ -253,7 +263,23 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     .nav-links li {
         margin-left: 20px; /* Space between nav items */
     }
-    .profo {
+    
+    .standarT{
+        margin-top: -5em;
+        margin-left: -45em;
+        font-size: 1em;
+        color: white;
+      
+    }
+    
+     .standardT{
+        padding-left: 5em;
+        margin-top: -15em;
+        font-size: 1.8em;
+        color: white;
+        
+     }
+     .profo {
         width: 130px; /* Default width for desktop */
     }
 }
