@@ -71,6 +71,8 @@ input[type="checkbox"] {
     transition: color 0.3s, transform 0.8s; /* Add transition for hover effect */
 }
 /* */
+
+
 .name {
     padding-left: 3.5em;
     padding-top: -3em;
@@ -146,7 +148,7 @@ input[type="checkbox"] {
     float: right;  
     position: relative;      
     display: block;   
-    margin-top: -450px;      
+    margin-top: -490px;      
     margin-left: -200px;      
     margin-right: 100px;     
     width: 100%;           
@@ -203,6 +205,18 @@ input[type="checkbox"]:checked ~ nav .nav-links {
 
 /* Media Query for Mobile Screens */
 @media (max-width: 850px) {
+
+    .re {
+        text-align: left;
+    }
+    .intro{
+        padding-left: 1em;
+    padding-top: -5em;
+    }
+    .name{
+        padding-left: 1em;
+    padding-top: 0em;
+    }
     header {
         flex-direction: row; /* Keep in row for mobile */
         align-items: center; /* Align items vertically in the center */
