@@ -234,6 +234,19 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     text-align: center;
     color: bisque;
 }
+.nonsoco{
+    color:white;
+display: flex;
+align-items: center;
+text-decoration: none;
+background-color: #102136; /* Button background color */
+border-radius: 5px; /* Rounded corners */
+padding: 10px 15px; /* Padding inside buttons */
+transition: background-color 0.3s, border-color 0.3s;
+}
+.read{
+    margin-right: -20em;
+}
 
 /* Media Query for Mobile Screens */
 
@@ -330,6 +343,7 @@ input[type="checkbox"]:checked ~ nav .nav-links {
         margin-right: 2em;      /* Set margin-right to auto to take up remaining space */
         width: 80px;             /* Default width for desktop */
     }    
+    
 }
 
 /* Media Query for Desktop Screens */
@@ -373,17 +387,16 @@ input[type="checkbox"]:checked ~ nav .nav-links {
         gap: 20px; /* Space between buttons */
     }
     .sesecion {
-        background-image: url('wavey-fingerprint.svg'); /* Path to your SVG file */
+       background-image: url('wavey-fingerprint.svg'); /* Path to your SVG file */
         display: flex; /* Use Flexbox */
         justify-content: space-between; /* Space them out */
         align-items: center; /* Center vertically */
         width: 100%; /* Ensure it uses full width */
-        padding: 0 5%; /* Add some overall padding */
         background-color: black; /* Optional: Background color for visibility */
         padding-bottom:10em;
         padding-top:4em;
     }
-    
+
     .title {
         color:white;
         font-size: 3em; /* Title size */
@@ -403,7 +416,7 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     .Ent {
         font-size: 1em;
         color: white;
-        padding-right: 14em; /* Adjust padding for spacing */
+        padding-right: 19em; /* Adjust padding for spacing */
         flex: 1; /* Make it flexible */
         text-align: center; /* Center text */
     }
