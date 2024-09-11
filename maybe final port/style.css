@@ -3,7 +3,7 @@ html, body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background: #222222;
+    background: #000000;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
     display: flex; /* Keep as flex for horizontal layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Align items vertically in the center */
-    background: #141414;
+    background: #101010;
     color: white;
     padding: 10px 10px;
     position: relative;
@@ -110,6 +110,33 @@ input[type="checkbox"] {
 }
 /* */
 
+.button-container {
+    padding-bottom: 16em;
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+.social-button {
+    color:white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #161616; /* Button background color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside buttons */
+    transition: background-color 0.3s, border-color 0.3s; /* Transition effect */
+}
+
+.social-button:hover {
+    background-color: #393939; /* Change background on hover */
+}
+
+.icon {
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    margin-right: 8px; /* Space between icon and text */
+}
+
 /* */
 .standarT{
     font-size: 1em;
@@ -128,7 +155,7 @@ input[type="checkbox"] {
     opacity: 0;                     /* Start hidden */
     transition: opacity 1s ease-in; /* Define the transition for opacity */
     animation-delay: 2s;            /* Delay before starting the transition */
-    padding-bottom: 20em;
+    padding-bottom: 6em;
 }
 
 .fadein.show {
@@ -191,13 +218,22 @@ input[type="checkbox"]:checked ~ nav .nav-links {
     margin: 1em 0; /* Margin for spacing 
 } */
 
-
 .sesecion {
-    text-align: center; /* Center text */
-    margin: 2em 0; /* Margin for spacing */
+    padding-bottom: 24em;;
+    display: none; /* Initially hide the section */
+    opacity: 0; /* Set initial opacity to 0 for fade-in effect */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
 }
 
+/* Class to show the section */
+.sesecion.visible {
+    opacity: 1; /* Set opacity to 1 to make it visible */
+}
 
+.test{
+    text-align: center;
+    color: bisque;
+}
 
 /* Media Query for Mobile Screens */
 
@@ -250,6 +286,8 @@ input[type="checkbox"]:checked ~ nav .nav-links {
         margin-right: 7em;         /* Space on the right */
         width: 20px;               /* Width for mobile */
     }
+    
+    
 }
 
 
@@ -328,4 +366,55 @@ input[type="checkbox"]:checked ~ nav .nav-links {
         margin-right: 90px; 
         width: 130px; /* Default width for desktop */
     }
+    .button-container {
+        padding-bottom: 14em;
+        display: flex;
+        justify-content: center; /* Center the buttons horizontally */
+        gap: 20px; /* Space between buttons */
+    }
+    .sesecion {
+        background-image: url('wavey-fingerprint.svg'); /* Path to your SVG file */
+        display: flex; /* Use Flexbox */
+        justify-content: space-between; /* Space them out */
+        align-items: center; /* Center vertically */
+        width: 100%; /* Ensure it uses full width */
+        padding: 0 5%; /* Add some overall padding */
+        background-color: black; /* Optional: Background color for visibility */
+        padding-bottom:10em;
+        padding-top:4em;
+    }
+    
+    .title {
+        color:white;
+        font-size: 3em; /* Title size */
+        margin-bottom: 1em; /* Space below title */
+        text-align: center; /* Center title text */
+    }
+    
+    .About {
+        padding-left:5em;
+        padding-right:4em;
+        font-size: 1em;
+        color: white;
+        flex: 1; /* Make it flexible */
+        text-align: center; /* Center text */
+    }
+    
+    .Ent {
+        font-size: 1em;
+        color: white;
+        padding-right: 14em; /* Adjust padding for spacing */
+        flex: 1; /* Make it flexible */
+        text-align: center; /* Center text */
+    }
+    
+    .profo1 {
+        border-radius: 50%;
+        max-width: 200px; /* Set max width for image */
+        height: auto; /* Maintain aspect ratio */
+        margin: 1em 0; /* Space around the image */
+    }
+    
+
 }
+    
