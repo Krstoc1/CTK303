@@ -15,9 +15,9 @@
         <label for="menu-toggle" class="menu-toggle">☰</label>
         <nav>
             <ul class="nav-links">
-                <li><a href="#blog">Home</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#projects">Blog</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
@@ -66,7 +66,16 @@
     </a>
 </div>
 
-   
+
+<!-- Button Wrapper -->
+<div class="button-wrapper">
+    <a href="your-link-here.html" class="recent-articles-button">
+        Recent Articles <span class="arrow">→</span>
+    </a>
+</div>
+
+</body>
+
 <footer>(<!--https://devdevout.com/css/css-footers *credit to this website* -->)
     <div class="foot">
         <ul>
@@ -86,6 +95,30 @@
   </footer>
 
 <script>
+
+    function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const buttonWrapper = document.querySelector('.button-wrapper');
+            if (isElementInViewport(buttonWrapper)) {
+                buttonWrapper.classList.add('visible');
+            }
+        }
+
+        // Initial check in case the element is already in view on load
+        handleScroll();
+
+        // Check on scroll
+        window.addEventListener('scroll', handleScroll);
+
     // Fade in effect for the .fadein class (already in your code)
     setTimeout(() => {
         document.querySelector('.fadein').classList.add('show');
