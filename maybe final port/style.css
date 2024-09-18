@@ -319,7 +319,7 @@ li {
     font-size: 50px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    transform: translateY(-90px); /* Adjust this value to float higher */
+    /* Adjust this value to float higher */
     z-index: 1; /* Ensures it appears above other list items */
 }
 .coff{
@@ -328,8 +328,7 @@ li {
     color: white; /* Text color */
     border: none; /* Remove border */
     border-radius: 5px; /* Rounded corners */
-    margin-bottom: 4em;
-    transform: translateY(-12px);
+   
     font-size: 30px;
 }
 li:hover ~ li p {
@@ -342,7 +341,7 @@ li:hover ~ li p {
 
 .foot {
     padding-top: 3em; /* Space at the top of the footer */
-    padding-bottom: 8em; /* Space at the bottom of the footer */
+    padding-bottom: 12em; /* Space at the bottom of the footer */
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
@@ -357,9 +356,8 @@ li:hover ~ li p {
 
 /* Style for <ul> inside the footer */
 .foot ul {
-        justify-content: center; /* Center content horizontally */
+    justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    padding-left: 25%;
     max-width: auto;
     display: flex; /* Use flexbox for the list items */
     gap: 24px; /* Space between list items */
