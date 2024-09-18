@@ -263,7 +263,7 @@ footer ul {
     grid-gap: 24px; /* Space between grid items */
     justify-items: center; /* Center items within their grid cells */
     margin: -10em; /* Remove default margin */
-    padding-top: 20em; /* Remove default padding */
+    padding-top: 0em; /* Remove default padding */
     width: 100%; /* Ensure the <ul> spans the full width of the viewport */
     box-sizing: border-box; /* Include padding and border in width calculation */
     list-style-type: none; /* Remove bullet points */
@@ -276,6 +276,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     padding-top: 20em;
+    padding-bottom: 20em;
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease-in-out; /* Smooth transition */
 }
@@ -383,7 +384,6 @@ li:hover ~ li p {
     font-size: 10px; /* Large font size */
     color: white; /* White text color */
     text-align: center; /* Center align the text */
-    padding: 20px; /* Padding for spacing */
     background-color: rgba(22, 22, 22, 0.5); /* Optional: background color */
 
 }
