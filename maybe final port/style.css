@@ -328,18 +328,14 @@ li {
     /* Adjust this value to float higher */
     z-index: 1; /* Ensures it appears above other list items */
 }
-.coff{
-    text-decoration-color: coral;
-    background-color: coral; /* Button background color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-   
-    font-size: 30px;
+.coff {
+    background-color: coral !important; /* Button background color */
+    color: white !important; /* Text color */
 }
-li:hover ~ li p {
-    
-    animation: wave-animation 0.3s infinite;
+
+
+.foot li:hover {
+    animation: wave-animation 0.6s infinite;
 }
 
 
@@ -447,8 +443,16 @@ li:hover ~ li p {
         width: 20px;               /* Width for mobile */
     }
     
-    
-}
+    .foot ul {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 5px; /* Space between items */
+        justify-items: center; /* Center items horizontally within their grid cells */
+        align-items: center; /* Center items vertically within their grid cells */
+        margin: 0; /* Remove default margin */
+     padding:0;
+        list-style-type: none; /* Remove bullet points */
+    }
 
 
 /* Media Query for Medium Screens */
