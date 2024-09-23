@@ -272,33 +272,38 @@ footer ul {
 
 
 .button-wrapper {
+    color:white;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20em;
     padding-bottom: 20em;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease-in-out; /* Smooth transition */
+  
 }
-.button-wrapper.visible {
-    opacity: 1; /* Fade in */
-}
+
 .recent-articles-button {
     display: inline-flex;
     align-items: center;
-   
     font-size: 50px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    text-decoration: none; /* No underline by default */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
 }
- .arrow {
-        margin-left: 8px;
-    }
-    
-    /* Button hover effect */
-    .recent-articles-button:hover {
-      text-decoration:underline;
-    }
+
+.recent-articles-button:hover {
+    transform: scale(1.5); /* Increase size */
+    /* Adjust if you want to move it off the page */
+    margin-left: 10px; /* Optional: push it slightly to the right */
+    /* Add a color change if desired */
+}
+
+
+.arrow {
+    margin-left: 8px;
+    text-decoration: none; /* Ensure the arrow has no underline */
+}
+
+
 
 @media (min-width: 200px) {
     ul {
