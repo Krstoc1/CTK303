@@ -349,7 +349,7 @@ li {
     align-items: center; /* Center content vertically */
     height: 0; /* Set the height of the footer */
     width: 100%; /* Ensure the footer spans the full width */
-    background-color: rgba(22, 22, 22, 0.5); /* Semi-transparent background */
+    background-color: red; /* Semi-transparent background */
     line-height: 1.3; /* Line height for text */
     font-family: Menlo, monospace; /* Font styling */
     box-sizing: border-box; /* Ensure padding is included in the element’s total width and height */
@@ -358,6 +358,7 @@ li {
 
 /* Style for <ul> inside the footer */
 .foot ul {
+    padding-top: 12em;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     max-width: auto;
@@ -607,3 +608,4 @@ li {
     }
     
 }    
+}
