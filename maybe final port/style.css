@@ -12,9 +12,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Lock the body to prevent scrolling */
-.locked {
-    overflow: hidden; /* Prevents scrolling */
+body.locked {
+    overflow: hidden; /* Lock scrolling */
 }
 
 header {

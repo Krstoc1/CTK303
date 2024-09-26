@@ -13,7 +13,6 @@
         </div>
         <button class="trigger">☰</button>
         
-        <!-- New header-nav div for desktop mode -->
         <div class="header-nav">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -84,14 +83,16 @@
         const trigger = document.querySelector('.trigger');
         const nav = document.querySelector('.full-screen-nav');
         const backdrop = document.querySelector('.backdrop');
+        const body = document.body;
 
         trigger.addEventListener('click', () => {
             nav.classList.add('open-nav');
-            document.body.classList.add('locked'); // Lock the screen
+            body.classList.add('locked'); // Lock the screen
         });
+
         backdrop.addEventListener('click', () => {
             nav.classList.remove('open-nav');
-            document.body.classList.remove('locked'); // Unlock the screen
+            body.classList.remove('locked'); // Unlock the screen
         });
 
         // Fade-in effect for the profo image
