@@ -1,611 +1,192 @@
-/* Base Styles */
-b{
-    color:coral;
-}
-html, body {
-    font-family: 'Nunito', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
+
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background: #000000;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
-    box-shadow: -0px 12px 12px rgba(0, 0, 0, 0.5);
-    display: flex; /* Keep as flex for horizontal layout */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Align items vertically in the center */
-    background: #101010;
-    color: white;
-    padding: 10px 10px;
-    position: relative;
-    animation: fadeIn 0.5s ease; /* Add fade-in animation */
-}
-
-header .ul {
-    display: flex; /* Keep as flex for horizontal layout */
-    justify-content: space-between; /* Space items evenly */
+    background-color: #333; /* Lighter shade of black */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
-    position: relative;
 }
-/* */
+
+/* New class for nav links in header */
+.header-nav {
+    display: none; /* Hidden by default */
+}
+
 .logo h1 {
-    padding-top: .5em;
-    padding-bottom: .2em;
-    margin: 0; /* Remove default margin */
-    font-size: 1.5em; /* Font size for header */
-    animation: float 10s ease-in-out infinite;
+    margin: 0;
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0); /* Start position */
-    }
-    50% {
-        transform: translateY(-10px); /* Float up */
-    }
-    100% {
-        transform: translateY(0); /* Return to start */
-    }
-}
-/* */
-
-/* Hide the checkbox */
-input[type="checkbox"] {
-    display: none; /* Hide the checkbox */
+.trigger {
+    background: #ffa500;
+    outline: 0;
+    padding: 8px 15px;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-/* Toggle Button Styles */
-.menu-toggle {
-    margin-left: auto; /* Align toggle button to the right */
-    cursor: pointer; /* Change cursor on hover */
-    font-size: 2em; /* Size of the toggle button */
-    display: none; /* Hide on desktop */
+.main {
+    padding: 20px;
 }
 
-/* Navigation Links */
-.nav-links {
-    
-    display: flex; /* Show menu as flex container */
-    flex-direction: row; /* Align links horizontally */
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding-left: 3em; /* Remove default padding */
+.intro, .name, .standardT, .standarT {
+    margin-bottom: 10px;
 }
-
-.nav-links a {
-    padding-right: 2em;
-    color: grey;
-    text-decoration: none;
-    font-size: 25px;
-    transition: color 0.3s, transform 0.8s; /* Add transition for hover effect */
-}
-/* */
-
-
-.name {
-    padding-left: .7em;
-    margin-top: -.2em;
-    color: coral;                  /* Change text color to purple */
-    font-size: 120px;                /* Increase text size */
-    font-weight: bold;              /* Make text bold */
-    opacity: 0;                     /* Start hidden */
-    transform: translateY(30px);    /* Start slightly lower */
-    animation: rotateIn 1s forwards; /* Apply rotate-in animation */
-    animation-delay: 0.4s;          /* Delay before animation starts */
-}
-
-.intro {
-    padding-left: 5em;
-    padding-top: 3em;
-    color: white;                   /* Change text color to white */
-    font-size: 25px;                /* Increase text size */
-    font-weight: bold;              /* Make text bold */
-    opacity: 0;                     /* Start hidden */
-    transform: translateY(30px);    /* Start slightly lower */
-    animation: rotateIn 1s forwards; /* Apply rotate-in animation */
-    animation-delay: 0.4s;          /* Delay before animation starts */
-}
-
-@keyframes rotateIn {
-    0% {
-        opacity: 0;                       /* Fully transparent */
-        transform: translateY(30px) rotateY(-30deg); /* Start lower and rotated back */
-    }
-   
-    100% {
-        opacity: 1;                       /* Fully opaque */
-        transform: translateY(0) rotateY(0); /* End at original position */
-    }
-}
-/* */
 
 .button-container {
-    padding-bottom: 16em;
-    display: flex;
-    gap: 20px; /* Space between buttons */
+    margin: 20px 0;
 }
 
 .social-button {
-    color:white;
-    display: flex;
-    align-items: center;
+    color: white;
     text-decoration: none;
-    background-color: #161616; /* Button background color */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding inside buttons */
-    transition: background-color 0.3s, border-color 0.3s; /* Transition effect */
+    margin-right: 15px;
 }
 
-.social-button:hover {
-    background-color: #393939; /* Change background on hover */
-}
-
-.icon {
-    width: 24px; /* Icon width */
-    height: 24px; /* Icon height */
-    margin-right: 8px; /* Space between icon and text */
-}
-
-/* */
-.standarT{
-    font-size: 1em;
-    color: white;
-  
-}
-
-
- .standardT{
-    font-size: 1.8em;
-    color: white;
-    
- }
-
-.fadein {
-    opacity: 0;                     /* Start hidden */
-    transition: opacity 1s ease-in; /* Define the transition for opacity */
-    animation-delay: 2s;            /* Delay before starting the transition */
-    padding-bottom: 6em;
-}
-
-.fadein.show {
-    opacity: 1; /* Fully visible when the class .show is added */
-}
-/* */
-
-.fadein::after {
-    content: ""; /* Clearfix */
-    display: table; /* Display as a block */
-    clear: both; /* Clear floats */
-}
-
-/* */
-.profo {
-    border-radius: .5em;
-    float: right;  
-    position: relative;      
-    display: block;       
-    width: 100%;           
-    min-width: 13em;       
-    max-height: 360px;            
-    box-shadow: -20px 12px 12px rgba(0, 0, 0, 0.5); 
-    animation: floatAnimation 12s ease-in-out infinite; /* Animation applied here */
-}
-
-@keyframes floatAnimation {
-    0% {
-        transform: scale(1); /* Initial scale */
-    }
-    50% {
-        transform: scale(1.1); /* Scale up to 110% */
-    }
-    100% {
-        transform: scale(1); /* Return to original scale */
-    }
-}
-/* */
-
-
-.nav-links a:hover {
-    color: coral;
-    transform: scale(5); /* Slightly enlarge on hover */
-}
-
-input[type="checkbox"]:checked ~ nav .nav-links {
-    padding-top: .5em;
-    padding-bottom: .5em;
-    display: flex; /* Show menu when checked */
-    position: absolute; /* Position menu as absolute */
-    background-color: rgb(14, 14, 14); /* Background color */
-    top: 60px; /* Adjust position below header */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-}
-
-
-
-.sesecion {
-    display: none; /* Initially hide the section */
-    opacity: 0; /* Set initial opacity to 0 for fade-in effect */
-    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
-}
-
-/* Class to show the section */
-.sesecion.visible {
-    opacity: 1; /* Set opacity to 1 to make it visible */
-}
-
-.test{
-    text-align: center;
-    color: bisque;
-}
-.nonsoco{
-    color:white;
-display: flex;
-align-items: center;
-text-decoration: none;
-background-color: #102136; /* Button background color */
-border-radius: 5px; /* Rounded corners */
-padding: 10px 15px; /* Padding inside buttons */
-transition: background-color 0.3s, border-color 0.3s;
-}
-
-/* Style for the footer element */
 footer {
-    padding-top: 0em; /* Adjust padding if needed */
-    
+    background-color: coral;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Style for <ul> inside the footer */
-footer ul {
-    display: grid; /* Use grid layout for better control */
-    grid-auto-flow: row; /* Arrange items in rows */
-    grid-gap: 24px; /* Space between grid items */
-    justify-items: center; /* Center items within their grid cells */
-    margin: -10em; /* Remove default margin */
-    padding-top: 0em; /* Remove default padding */
-    width: 100%; /* Ensure the <ul> spans the full width of the viewport */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    list-style-type: none; /* Remove bullet points */
-    overflow: hidden; /* Prevent overflow issues */
+.foot ul {
+    list-style-type: none;
+    padding: 0;
 }
 
+.foot li {
+    display: inline;
+    margin: 0 10px;
+}
 
-.button-wrapper {
-    color:white;
+/* Full-Screen Navigation Styles */
+.full-screen-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s ease-in-out;
+    display: none; /* Initially hidden */
+}
+
+.open-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20em;
-    padding-bottom: 20em;
-  
 }
 
-.recent-articles-button {
-    display: inline-flex;
-    align-items: center;
-    font-size: 50px;
-    font-weight: bold;
-    text-decoration: none; /* No underline by default */
-    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for size and color */
+.backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    cursor: pointer;
+    animation: fadeIn 0.2s ease-in-out forwards;
 }
 
-.recent-articles-button:hover {
-    transform: scale(1.5); /* Increase size */
-    /* Adjust if you want to move it off the page */
-    margin-left: 10px; /* Optional: push it slightly to the right */
-    /* Add a color change if desired */
-}
-
-
-.arrow {
-    margin-left: 8px;
-    text-decoration: none; /* Ensure the arrow has no underline */
-}
-
-
-
-@media (min-width: 200px) {
-    ul {
-        grid-auto-flow: column;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
-a {
-    color: white;
-    text-decoration: none; /* This already removes text decoration */
+ul {
+    z-index: 9999;
+    position: relative;
 }
 
-li {
-    /* Optional: Adjust the default size of all list items */
-    font-size: 16px; /* Adjust as necessary */
+ul li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: 0.25s ease-in-out animateList forwards;
 }
 
-.foot li:last-child {
-    font-size: 50px;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    /* Adjust this value to float higher */
-    z-index: 1; /* Ensures it appears above other list items */
-}
-.coff {
-    background-color: coral !important; /* Button background color */
-    color: white !important; /* Text color */
+ul li:last-child {
+    margin-bottom: 0;
 }
 
-
-.foot li:hover {
-    animation: wave-animation 0.6s infinite;
-}
-
-
-/* Below is just for demo styling */
-
-.foot {
-    padding-top: 0em; /* Space at the top of the footer */
-    padding-bottom: 12em; /* Space at the bottom of the footer */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 0; /* Set the height of the footer */
-    width: 100%; /* Ensure the footer spans the full width */
-    background-color: red; /* Semi-transparent background */
-    line-height: 1.3; /* Line height for text */
-    font-family: Menlo, monospace; /* Font styling */
-    box-sizing: border-box; /* Ensure padding is included in the element’s total width and height */
-}
-
-
-/* Style for <ul> inside the footer */
-.foot ul {
-    padding-top: 12em;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    max-width: auto;
-    display: flex; /* Use flexbox for the list items */
-    gap: 24px; /* Space between list items */
-    list-style-type: none; /* Remove bullet points */
-}
-
-
-  
-  @keyframes wave-animation {
-    0%,
-    100% {
-      transform: rotate(0deg);
+@keyframes animateList {
+    from {
+        margin-top: -60px;
+        opacity: 0;
     }
-    25% {
-      transform: rotate(20deg);
+    to {
+        margin-top: 0;
+        opacity: 1;
     }
-    75% {
-      transform: rotate(-15deg);
-    }
-  }
-
-  .foot-text {
-    font-size: 10px; /* Large font size */
-    color: white; /* White text color */
-    text-align: center; /* Center align the text */
-    background-color: rgba(22, 22, 22, 0.5); /* Optional: background color */
-
 }
 
-  /**/
+ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: 0.15s ease-in-out;
+}
 
-/* Media Query for Mobile Screens */
+ul li a:hover {
+    color: #ffa500;
+}
 
-@media (max-width: 795px) {
-    .re {
-        text-align: left;
-    }
-    .intro {
-        padding-left: 0.5em;
-        margin-top: -1em;
-    }
-    .name {
-        font-size: 50px;
-        margin-left: -0.6em;
-        margin-top: 0.2em;
-    }
-    .fadein {
-        margin-top: -7em;
-    }
+/* Media Queries */
+@media (max-width: 600px) {
     header {
-        flex-direction: row; /* Keep in row for mobile */
-        align-items: center; /* Align items vertically in the center */
-        justify-content: space-between; /* Space out items for better alignment */
-    }
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-    }
-    .nav-links {
-        display: none; /* Hide links initially */
-    }
-    
-    .fadein::after {
-        display: block; /* Display as a block */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .standarT {
-        font-size: 17px;
-        margin-top: -12em;
-        padding-left: 3em;
-    }
-    .standardT {
-        font-size: 19px;
-        margin-top: 31em;
-        padding-left: 1em;
-        padding-bottom: 12em;
-    }
-    .profo {
-        margin-top: -600px; 
-        margin-left: auto;          /* Align to the left */
-        margin-right: 7em;         /* Space on the right */
-        width: 20px;               /* Width for mobile */
-    }
-    
-    .foot ul {
-        display: grid; /* Use grid layout */
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        gap: 5px; /* Space between items */
-        justify-items: center; /* Center items horizontally within their grid cells */
-        align-items: center; /* Center items vertically within their grid cells */
-        margin: 0; /* Remove default margin */
-     padding:0;
-        list-style-type: none; /* Remove bullet points */
+    .logo {
+        margin-bottom: 10px;
     }
 
+    .trigger {
+        display: block; /* Show menu button */
+    }
 
-/* Media Query for Medium Screens */
-@media (min-width: 796px) and (max-width: 1179px) {
-
-    .re {
-        text-align: left;
+    /* Hide nav links in mobile */
+    .header-nav {
+        display: none; /* Completely hidden */
     }
-    .intro {
-        padding-left: .5em;
-        margin-top: -1em;
-    }
-    .name {
-        font-size: 70px;
-        margin-left: -.6em;
-        margin-top: .2em;
-    }
-    .nav-links {
-        display: flex; /* Show navigation links on desktop */
-        flex-direction: row; /* Ensure horizontal alignment */
-    }
-    .nav-links li {
-        margin-left: 20px; /* Space between nav items */
-    }
-    .standarT {
-        font-size: 17px;
-        margin-top: -12em;
-        padding-left: 3em;
-    }
-    .standardT {
-        font-size: 19px;
-        margin-top: -2em;
-        padding-left: 1em;
-        padding-bottom: 12em;
-    }
-    .profo {
-        margin-top: -300px;      
-        margin-left: auto;          /* Set margin-left to 0 to align to the left */
-        margin-right: 2em;      /* Set margin-right to auto to take up remaining space */
-        width: 80px;             /* Default width for desktop */
-    }    
-    
 }
 
-/* Media Query for Desktop Screens */
-@media (min-width: 1180px) {
+@media (min-width: 1025px) {
+    .trigger {
+        display: none; /* Hide the menu button in desktop mode */
+    }
+
+    /* Show header nav links in desktop */
+    .header-nav {
+        display: flex; /* Display links in a row in desktop mode */
+        margin-left: auto; /* Align to the right */
+    }
+
     .nav-links {
-        display: flex; /* Show navigation links on desktop */
-        flex-direction: row; /* Ensure horizontal alignment */
+        display: flex; /* Display links in a row */
     }
+
     .nav-links li {
-        margin-left: 20px; /* Space between nav items */
-
-    
-
+        margin-left: 20px; /* Add some spacing between links */
     }
-
-    .fadein::after {
-        
-        display:block; /* Display as a block */
-        
-    }
-    
-    .standarT {
-        margin-top: -20em;
-        padding-left: 9em;
-    }
-    .standardT {
-        margin-top: -2em;
-        padding-left: 3em;
-        padding-bottom: 12em;
-    }
-    .profo {
-        margin-top: -400px;      
-        margin-left: 700px;      
-        margin-right: 90px; 
-        width: 130px; /* Default width for desktop */
-    }
-    .button-container {
-        padding-bottom: 14em;
-        display: flex;
-        justify-content: center; /* Center the buttons horizontally */
-        gap: 20px; /* Space between buttons */
-    }
-
-
-    .title {
-        color:white;
-        font-size: 3em; /* Title size */
-        margin-bottom: 1em; /* Space below title */
-        text-align: center; /* Center title text */
-    }
-    .title1{
-        color:white;
-        font-size: 3em; /* Title size */
-        margin-bottom: 1em; /* Space below title */
-        text-align: center; /* Center title text */
-    }
-    
- 
-    .sesecion {
-        background-image: url('wavey-fingerprint.svg'); /* Path to your SVG file */
-        display: flex; /* Use Flexbox for layout */
-        flex-direction: row; /* Align children in a row */
-        align-items: flex-start; /* Align items to the top */
-        justify-content: space-around; /* Distribute space evenly between items */
-        width: 100%; /* Ensure it uses full width */
-        height: 63vh; /* Full viewport height */
-        background-color: black; /* Optional: Background color for visibility */
-       padding-top: 3em;
-        box-sizing: border-box; /* Include padding in the element's total width */
-    }
-    .About{
-        padding-right: 6em;
-        font-size: 1em;
-        color: white;
-        text-align: center; /* Center text */
-       padding-left: 2em;
-        width: 300px; /* Specify a fixed width for consistent layout */
-        flex: 1; /* Allow items to grow/shrink as needed */
-    }
-    
-    .Ent {
-        padding-right:-5em;
-        font-size: 1em;
-        color: white;
-        text-align: center; /* Center text */
-       
-        width: 300px; /* Specify a fixed width for consistent layout */
-        flex: 1; /* Allow items to grow/shrink as needed */
-    }
-    
-    .profo1 {
-        border-radius: 50%;
-        width: 220px; /* Set a fixed width for the image */
-        height: auto; /* Maintain aspect ratio */
-        margin: 10px; /* Add margin for spacing */
-    }
-    
-    .nonsoco {
-        margin-top:5em;
-        padding-right: 5em;
-        display: flex; /* Use Flexbox */
-        align-items: center; /* Center items vertically */
-        color: coral;
-        text-decoration: none;
-        background-color: #102136; /* Button background color */
-        border-radius: 5px; /* Rounded corners */
-        
-        transition: background-color 0.3s, border-color 0.3s;
-        
-    }
-    
-}    
 }
