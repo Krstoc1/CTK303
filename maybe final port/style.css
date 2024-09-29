@@ -350,6 +350,7 @@ ul li a:hover {
 
     /* About Me section on mobile */
     .sesecion {
+        gap: 1em;
         display: flex;
         flex-direction: row; /* Display items side by side */
         justify-content: center; /* Center elements horizontally */
@@ -391,7 +392,10 @@ ul li a:hover {
         padding-bottom: 2em;
         font-size: 1.2em; /* Smaller text size for mobile */
     }
-
+    .recent-articles-button{
+        text-decoration: underline;
+        font-size: 3em;
+    }
     /* Smaller name and intro for mobile */
 
 }
