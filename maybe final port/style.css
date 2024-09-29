@@ -31,7 +31,7 @@ header {
 }
 
 .header-nav a {
-    margin-left:.5em;
+    margin-left: .5em;
     color: white; /* Set text color to white */
     text-decoration: none; /* Remove underline from links */
     transition: color 0.3s ease-in-out; /* Smooth transition for hover */
@@ -60,27 +60,9 @@ header {
     padding: 20px;
 }
 
-.intro {
-    font-size: 2em; /* Larger font size */
-    font-weight: 500;
-    margin-bottom: 10px;
-    margin-left: 50px; /* Add space from the left */
-    margin-top: 100px;  /* Add space from the top */
-}
-
-.name {
-    font-size: 8em; /* Slightly smaller font */
-    color: coral; /* Coral color */
-    font-weight: 900;
-    margin-left: 120px; /* Add space from the left */
-}
-
-.standardT, .standarT {
-    margin-bottom: 10px;
-}
-
 /* Social Buttons */
 .button-container {
+    text-align: center;
     display: flex;
     justify-content: center; /* Center buttons horizontally */
     align-items: center; /* Center buttons vertically */
@@ -90,12 +72,13 @@ header {
 
 .social-button {
     display: flex;
-    align-items: center;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
     background-color: coral; /* Button background color */
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
-    padding: 15px 30px; /* Padding for button size */
-    border-radius: 25px; /* Rounded corners */
+    padding: 15px 10px; /* Padding for button size */
+    border-radius: 10px; /* Rounded corners */
     margin: 10px; /* Margin for spacing between buttons */
     transition: background-color 0.3s ease-in-out; /* Smooth transition */
     width: 200px; /* Adjust width as needed */
@@ -103,8 +86,7 @@ header {
 }
 
 .social-button svg {
-    margin-right: 10px; /* Space between SVG and text */
-    vertical-align: middle; /* Align SVG with text */
+    margin-right: 10px; /* Add some space between the icon and text */
 }
 
 .social-button:hover {
@@ -221,7 +203,13 @@ ul li a:hover {
     justify-content: space-between;
     align-items: center; /* Center vertically */
 }
-
+.standardT{
+    font-size: 2em;
+}
+.standarT{
+    margin-top: 1em;
+    font-size: 1.5em;
+}
 /* Logo Animation */
 .logo {
     animation: float 4s ease-in-out infinite; /* Infinite floating animation */
@@ -240,8 +228,92 @@ ul li a:hover {
     }
 }
 
+/* About Me Section */
+.sesecion {
+    display: flex;
+    justify-content: space-between; /* Spread elements across */
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Allow wrapping in mobile */
+    margin-top: 20px;
+    background-image: url('wavey-fingerprint.svg'); /* Add your custom image URL */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 40px 150px; /* Adds padding around the content */
+    border-radius: 10px; /* Optional: adds rounded corners to the background */
+}
+
+.title{
+    margin-top: 5em;
+}
+/* Adjust text background to ensure readability on top of the image */
+.sesecion .About,
+.sesecion .Ent,
+.sesecion .nonsoco {
+    background-color: rgba(122, 122, 122, 0.6); /* Semi-transparent background for better readability */
+    padding: 15px;
+    border-radius: 5px; /* Add rounded corners */
+}
+
+/* Image inside the section */
+.sesecion .profo1 {
+    max-width: 250px; /* Adjust the image width */
+    border-radius: 10px; /* Optional: round image corners */
+}
+
+.sesecion .nonsoco {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.button-wrapper {
+    display: flex;             /* Use flexbox for centering */
+    justify-content: center;   /* Center the content horizontally */
+    align-items: center;       /* Center the content vertically */
+    margin-top: 15em;         /* Adjust as needed for space above */
+    margin-bottom: 15em;      /* Adjust as needed for space below */
+}
+
+.recent-articles-button {
+    font-size: 5em;           /* Font size for the button */
+    text-decoration: none;     /* Remove underline from the link */
+    color: white;              /* Ensure button text color is white */
+    transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
+}
+
+.recent-articles-button:hover {
+    transform: scale(1.1); /* Scale up the button size on hover */
+}
+
+.intro {
+    font-size: 2em; /* Larger font size */
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 30px; /* Add space from the left */
+    margin-top: 100px;  /* Add space from the top */
+}
+
+.name {
+    font-size: 3em; /* Slightly smaller font */
+    color: coral; /* Coral color */
+    font-weight: 900;
+    margin-left: 120px; /* Add space from the left */
+}
 /* Media Queries */
 @media (max-width: 600px) {
+    
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -275,7 +347,56 @@ ul li a:hover {
     .social-button {
         margin: 5px 0; /* Margin for spacing between buttons */
     }
+
+    /* About Me section on mobile */
+    .sesecion {
+        display: flex;
+        flex-direction: row; /* Display items side by side */
+        justify-content: center; /* Center elements horizontally */
+        align-items: center; /* Center elements vertically */
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    .profo1 {
+        margin-right: 10px; /* Space between image and entitlements */
+        max-width: 100px; /* Set a max width for the image */
+    }
+
+    /* Align entitlements and read more next to the image */
+    .Ent, .nonsoco {
+        margin: 0 10px; /* Side margins for spacing */
+        text-align: center; /* Center text within these elements */
+        max-width: 200px; /* Limit max width for better layout */
+    }
+
+    .Ent {
+        margin-top: 0; /* Adjust spacing */
+        order: 2; /* Place after the image */
+    }
+
+    .nonsoco {
+        order: 3; /* Keep "Read More!" after Entitlements */
+        text-align: center; /* Center "Read More!" text */
+    }
+    .content-wrapper {
+        flex-direction: column; /* Ensure stacking in mobile view */
+    }
+
+    .standardT {
+        padding-top:2em;
+        font-size: 1.5em; /* Smaller text size for mobile */
+    }
+
+    .standarT {
+        padding-bottom: 2em;
+        font-size: 1.2em; /* Smaller text size for mobile */
+    }
+
+    /* Smaller name and intro for mobile */
+
 }
+
+
 
 @media (min-width: 1025px) {
     .trigger {
@@ -295,4 +416,39 @@ ul li a:hover {
     .nav-links li {
         margin-left: 20px; /* Add some spacing between links */
     }
+    
+    .intro {
+        font-size: 2em; /* Larger font size */
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-left: 50px; /* Add space from the left */
+        margin-top: 100px;  /* Add space from the top */
+    }
+    
+    .name {
+        font-size: 8em; /* Slightly smaller font */
+        color: coral; /* Coral color */
+        font-weight: 900;
+        margin-left: 120px; /* Add space from the left */
+    }
+    
+    .Ent {
+        margin-top: 0; /* Adjust spacing */
+        order: 1; /* Place before the image */
+    }
+
+    .profo1 {
+        order: 2; /* Place after the Entitlements */
+    }
+
+    .nonsoco {
+        order: 3; /* Keep "Read More!" after Entitlements */
+        text-align: right; /* Align "Read More!" to the right */
+        margin-top: 1em; /* Adjust this value to move it down */
+    }
+
+    .profo1, .nonsoco, .Ent {
+        margin-top: 2em;   
+    }
 }
+
