@@ -17,36 +17,49 @@ body.locked {
 }
 
 header {
-    background-color: coral; /* Change header color to coral */
+    background-color: rgb(18, 18, 18); /* Dark background color */
     padding: 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 
+        0 0px 15px #aa75ff7d,         /* Inner sharp shadow */
+        0 0px 50px rgb(85, 0, 255); /* Outer soft glow */
 }
+
 
 /* New class for nav links in header */
 .header-nav {
-    margin-top: 1.4em;
+    margin-bottom:-2em;
     display: none; /* Hidden by default */
 }
 
 .header-nav a {
+    font-size: 30px;
     margin-left: .5em;
-    color: white; /* Set text color to white */
+    color: rgb(43, 43, 43); /* Set text color to white */
     text-decoration: none; /* Remove underline from links */
-    transition: color 0.3s ease-in-out; /* Smooth transition for hover */
+    padding: 0.1em .7em; /* Add padding for a larger clickable area */
+    border-radius: 0.5em; /* Ensure the border-radius is initially set */
+    transition: box-shadow .4s ease-in-out, .4s ease-in-out, .4s ease-in-out, border-radius .4s ease-in-out; /* Smooth transition for hover */
 }
 
 .header-nav a:hover {
-    color: #ffa500; /* Change color on hover */
+    background: rgb(35, 35, 35); /* Dark background on hover */
+    color: #ffffff; /* Keep text color transition on hover */
+    border-radius: 0.2em; /* Rounded corners on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Drop shadow */
 }
 
+
+
 .logo h1 {
+    color:grey;
     margin: 0;
 }
 
 .trigger {
-    background: #ffa500;
+    background: #2a2a2a;
     outline: 0;
     padding: 8px 15px;
     color: #fff;
@@ -54,7 +67,12 @@ header {
     border-radius: 5px;
     font-size: 1.5em;
     cursor: pointer;
+    
+    position: absolute; /* Position the button relative to its nearest ancestor */
+    right: 20px; /* 20px from the right edge */
+    top: 3px; /* 20px from the top edge */
 }
+
 
 .main {
     padding: 20px;
@@ -74,14 +92,14 @@ header {
     display: flex;
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
-    background-color: coral; /* Button background color */
+    background-color: rgb(35, 35, 35); /* Button background color */
     color: white; /* Text color */
     text-decoration: none; /* Remove underline */
-    padding: 15px 10px; /* Padding for button size */
+    padding: 15px 5px; /* Padding for button size */
     border-radius: 10px; /* Rounded corners */
     margin: 10px; /* Margin for spacing between buttons */
     transition: background-color 0.3s ease-in-out; /* Smooth transition */
-    width: 200px; /* Adjust width as needed */
+    width: 150px; /* Adjust width as needed */
     text-align: center; /* Center text */
 }
 
@@ -90,7 +108,7 @@ header {
 }
 
 .social-button:hover {
-    background-color: #ffa500; /* Darker shade on hover */
+    background-color: rgb(59, 59, 59); /* Darker shade on hover */
 }
 
 footer {
@@ -194,7 +212,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #ffa500;
+    color: rgba(134, 73, 255, 0.7);
 }
 .re {
     opacity: 0; /* Hide initially */
@@ -204,8 +222,8 @@ ul li a:hover {
 .content-wrapper {
     opacity: 0; /* Hide initially */
     transition: opacity 2s ease-in-out; /* Smooth fade-in effect */
-    margin-left: 4em;
     display: flex;
+    margin-left:4em;
     justify-content: space-between;
     align-items: center; /* Center vertically */
 }
@@ -218,7 +236,7 @@ ul li a:hover {
 }
 /* Logo Animation */
 .logo {
-    animation: float 4s ease-in-out infinite; /* Infinite floating animation */
+    animation: float 10s ease-in-out infinite; /* Infinite floating animation */
 }
 
 /* Floating Animation for Logo */
@@ -267,8 +285,8 @@ ul li a:hover {
     border-radius: 10px; /* Optional: round image corners */
 }
 .profo{
-    margin-right: 1em;
-    border-radius: 2em;
+    margin-right: 2em;
+    border-radius: .5em;
 }
 .sesecion .nonsoco {
     display: inline-block;
@@ -307,6 +325,7 @@ ul li a:hover {
 }
 
 .intro {
+    color:rgba(134, 73, 255, 0.7);
     font-size: 2em; /* Larger font size */
     font-weight: 500;
     margin-bottom: 10px;
@@ -316,9 +335,13 @@ ul li a:hover {
 
 .name {
     font-size: 3em; /* Slightly smaller font */
-    color: coral; /* Coral color */
+    color: rgb(26, 26, 26); /* Text color */
     font-weight: 900;
     margin-left: 120px; /* Add space from the left */
+    text-shadow: 3px 3px 8px rgba(134, 73, 255, 0.7); /* Drop shadow */
+}
+.tester{
+    color:rgba(134, 73, 255, 0.7);
 }
 /* Media Queries */
 @media (max-width: 600px) {
@@ -390,6 +413,7 @@ ul li a:hover {
     }
     .content-wrapper {
         flex-direction: column; /* Ensure stacking in mobile view */
+        margin-left: 0em;
     }
 
     .standardT {
@@ -406,7 +430,10 @@ ul li a:hover {
         font-size: 3em;
     }
     /* Smaller name and intro for mobile */
-
+    .profo{
+        margin-right: 0em;
+        border-radius: .5em;
+    }
 }
 
 
@@ -439,8 +466,7 @@ ul li a:hover {
     }
     
     .name {
-        font-size: 8em; /* Slightly smaller font */
-        color: coral; /* Coral color */
+        font-size: 8em; /* Slightly smaller font *
         font-weight: 900;
         margin-left: 120px; /* Add space from the left */
     }
@@ -464,7 +490,7 @@ ul li a:hover {
         margin-top: 2em;   
     }
     .profo {
-      animation: pulse 3s infinite alternate ease-in-out;
+      animation: pulse 6s infinite alternate ease-in-out;
     }
     
     /* Define the pulse animation */
