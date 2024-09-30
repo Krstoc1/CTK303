@@ -113,6 +113,17 @@
     </footer>
 
     <script>
+
+   window.addEventListener('load', function() {
+  const content = document.querySelector('.content-wrapper');
+  const reElement = document.querySelector('.re');
+  
+  // Fade-in for both elements
+  content.style.opacity = 2;
+  reElement.style.opacity = 1;
+});
+
+
         const trigger = document.querySelector('.trigger');
         const nav = document.querySelector('.full-screen-nav');
         const backdrop = document.querySelector('.backdrop');

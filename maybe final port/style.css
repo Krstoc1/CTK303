@@ -196,9 +196,15 @@ ul li a {
 ul li a:hover {
     color: #ffa500;
 }
-
+.re {
+    opacity: 0; /* Hide initially */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+}
 /* Content Wrapper Styles */
 .content-wrapper {
+    opacity: 0; /* Hide initially */
+    transition: opacity 2s ease-in-out; /* Smooth fade-in effect */
+    margin-left: 4em;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Center vertically */
@@ -260,7 +266,10 @@ ul li a:hover {
     max-width: 250px; /* Adjust the image width */
     border-radius: 10px; /* Optional: round image corners */
 }
-
+.profo{
+    margin-right: 1em;
+    border-radius: 2em;
+}
 .sesecion .nonsoco {
     display: inline-block;
     padding: 10px 20px;
@@ -453,6 +462,19 @@ ul li a:hover {
 
     .profo1, .nonsoco, .Ent {
         margin-top: 2em;   
+    }
+    .profo {
+      animation: pulse 3s infinite alternate ease-in-out;
+    }
+    
+    /* Define the pulse animation */
+    @keyframes pulse {
+      0% {
+        transform: scale(1); /* Normal size */
+      }
+      100% {
+        transform: scale(1.1); /* Zoomed in */
+      }
     }
 }
 
