@@ -53,9 +53,9 @@ nav ul li a {
     padding: 5em;
     font-size: 24px;
     margin-bottom: 20px;
-    background-image: url('img/radiohead.jpg'); /* Replace with your image URL */
+    background-image: url('img/radiohead.jpg'); 
     background-size: cover;
-    background-position: bottom; /* Start the image centered */
+    background-position: bottom; 
     background-attachment: fixed; /* Keep the background scrollable */
     color: white;
     position: relative;
@@ -78,10 +78,9 @@ nav ul li a {
     display: block;
 } 
 
-/* Header 2 for Columns Section */
-/* Apply background to the parent container */
+
 .columns-wrapper {
-    background: aqua ;  /* Adjust background color as needed */
+    background: aqua ;  
     padding: 20px;
     margin-left:5em;
     margin-right:5em;
@@ -89,15 +88,15 @@ nav ul li a {
     
 }
 
-/* Header 2 for Columns Section */
+
 .header2 {
     font-size: 36px;
     color: black;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 30px 0;  /* Adds space above and below the header */
-    text-align: center;  /* Centers the header */
-    letter-spacing: 2px; /* Adds a little spacing between letters */
+    margin: 30px 0; 
+    text-align: center; 
+    letter-spacing: 2px; 
 }
 
 /* Columns Section */
@@ -122,9 +121,9 @@ nav ul li a {
 }
 
 .column:hover {
-    transform: scale(1.05);  /* Slightly increases the size of the column */
-    background: rgba(0, 0, 0, 0.1);  /* Darkens the background when hovered */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  /* Adds a stronger shadow effect */
+    transform: scale(1.05);  
+    background: rgba(0, 0, 0, 0.1);  
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  
 }
 
 .spotify-links a {
@@ -154,13 +153,13 @@ text-decoration: none;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover effect to enlarge the item */
+
 .spotify-item:hover {
-    transform: scale(1.1); /* Increase size by 10% */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Make the shadow a bit more prominent on hover */
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
 }
 
 
@@ -172,7 +171,7 @@ text-decoration: none;
 /* Slider container positioning */
 .slider-container {
     width: 100%;
-    margin: 50px 0; /* Space between sections */
+    margin: 50px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,36 +183,36 @@ text-decoration: none;
     background: white;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
     height: 100px;
-    width: 960px; /* Width of the slider */
+    width: 960px; 
     position: relative;
     overflow: hidden;
 }
 
-/* Animation for infinite scroll */
+
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-250px * 5)); } /* Move by 5 images */
 }
 
-/* Styling for the image track */
+
 .slide-track {
     display: flex;
     animation: scroll 40s linear infinite; /* Adjust speed here */
     width: calc(250px * 10); /* 5 images + 5 repeats for seamless loop */
 }
 
-/* Styling for each individual image container */
+
 .slide {
     height: 100px;
     width: 250px;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0; 
 }
 
-/* Style the images themselves */
+
 .slider img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images cover the full container without distortion */
+    object-fit: cover; 
 }
 
 /* Gradient effect for fading out the sides */
@@ -245,7 +244,7 @@ text-decoration: none;
     margin-bottom: 40px;
 }
 
-/* Team Title */
+
 .team-title {
     font-size: 32px;
     font-weight: bold;
@@ -254,7 +253,7 @@ text-decoration: none;
     text-transform: uppercase;
 }
 
-/* Team Gallery */
+
 .team-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Auto-fill columns, but at least 300px wide */
@@ -262,7 +261,7 @@ text-decoration: none;
     justify-items: center;
 }
 
-/* Team Item Styling */
+
 .team-item {
     position: relative;
     overflow: hidden;
@@ -271,37 +270,35 @@ text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-/* Image Styling */
+
 .team-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Ensures the image covers the box and maintains aspect ratio */
+    object-fit: cover;  
     display: block;
     transition: transform 0.3s ease;
 }
 
-/* Hover Effect for Images */
+
 .team-item:hover img {
     transform: scale(1.05);
 }
 
-/* Staggered Effect (Using nth-child for randomness) */
+
 .team-gallery .team-item:nth-child(odd) {
-    grid-row: span 2;  /* Makes the odd images taller */
+    grid-row: span 2;  
 }
 
-/* Force 3 images per row on larger screens */
+
 @media (min-width: 1024px) {
     .team-gallery {
-        grid-template-columns: repeat(3, 1fr);  /* Forces 3 columns */
+        grid-template-columns: repeat(3, 1fr);  
     }
 
     .team-gallery .team-item:nth-child(odd) {
-        grid-row: span 1;  /* Remove staggered effect for 3-column layout */
+        grid-row: span 1;  
     }
 }
-
-
 
 footer {
     background: #333;
