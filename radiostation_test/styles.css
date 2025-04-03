@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+    text-align: center;
+}
+
+header {
+    background: #1c1c1c;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+h2{
+    padding-top: 5em;
+    color:white;
+}
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #444;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.intro {
+    padding: 5em;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-image: url('img/radiohead.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: bottom; /* Start the image centered */
+    background-attachment: fixed; /* Keep the background scrollable */
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.intro .text-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    display: block;
+} 
+
+/* Header 2 for Columns Section */
+/* Apply background to the parent container */
+.columns-wrapper {
+    background: aqua ;  /* Adjust background color as needed */
+    padding: 20px;
+    margin-left:5em;
+    margin-right:5em;
+    box-shadow:  0 0 30px rgba(0, 238, 255, 0.832); 
+    
+}
+
+/* Header 2 for Columns Section */
+.header2 {
+    font-size: 36px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 0;  /* Adds space above and below the header */
+    text-align: center;  /* Centers the header */
+    letter-spacing: 2px; /* Adds a little spacing between letters */
+}
+
+/* Columns Section */
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.column {
+    background: rgba(0, 0, 0, 0.514);
+    padding: 15px;
+    flex: 1;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.6s ease; 
+}
+
+.column:hover {
+    transform: scale(1.05);  /* Slightly increases the size of the column */
+    background: rgba(0, 0, 0, 0.1);  /* Darkens the background when hovered */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  /* Adds a stronger shadow effect */
+}
+
+.spotify-links a {
+    color: black;
+text-decoration: none;
+}
+
+.spotify-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.spotify-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.spotify-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect to enlarge the item */
+.spotify-item:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Make the shadow a bit more prominent on hover */
+}
+
+
+.spotify-item img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Slider container positioning */
+.slider-container {
+    width: 100%;
+    margin: 50px 0; /* Space between sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Styling for the slider */
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    width: 960px; /* Width of the slider */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation for infinite scroll */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 5)); } /* Move by 5 images */
+}
+
+/* Styling for the image track */
+.slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite; /* Adjust speed here */
+    width: calc(250px * 10); /* 5 images + 5 repeats for seamless loop */
+}
+
+/* Styling for each individual image container */
+.slide {
+    height: 100px;
+    width: 250px;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Style the images themselves */
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the full container without distortion */
+}
+
+/* Gradient effect for fading out the sides */
+.slider::before,
+.slider::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider::before {
+    left: 0;
+}
+
+.slider::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+
+/* Team Section Styling */
+.team-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Team Title */
+.team-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Team Gallery */
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Auto-fill columns, but at least 300px wide */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Team Item Styling */
+.team-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Image Styling */
+.team-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the image covers the box and maintains aspect ratio */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Images */
+.team-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Staggered Effect (Using nth-child for randomness) */
+.team-gallery .team-item:nth-child(odd) {
+    grid-row: span 2;  /* Makes the odd images taller */
+}
+
+/* Force 3 images per row on larger screens */
+@media (min-width: 1024px) {
+    .team-gallery {
+        grid-template-columns: repeat(3, 1fr);  /* Forces 3 columns */
+    }
+
+    .team-gallery .team-item:nth-child(odd) {
+        grid-row: span 1;  /* Remove staggered effect for 3-column layout */
+    }
+}
+
+
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}

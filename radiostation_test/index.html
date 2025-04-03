@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Station</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Radio Station</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://myboostnation.com/?gad_source=1&gclid=CjwKCAjwwLO_BhB2EiwAx2e-36P-IrygqdXzVX5I2vCWZJYQRL_ds8aT5tVaF4lBIOXOpXoQHDapOhoCFpsQAvD_BwE#is-playing">Live Radio</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="intro">
+        <div class="text-container">
+            <p>Bringing you the best tunes, the hottest hits, and the stories behind the music. Stay tuned!</p>
+        </div>
+    </div>
+    
+    <div class="columns-wrapper">
+        <h2 class="header2">Discover More</h2>
+    
+        <div class="columns">
+            <div class="column">
+                <h3>History</h3>
+                <p>Details about the station's history.</p>
+            </div>
+            <div class="column">
+                <h3>Music Broadcast</h3>
+                <p>What music is played on our station.</p>
+            </div>
+            <div class="column">
+                <h3>Unknown</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Listen to Our Featured Tracks</h2>
+
+    <section class="spotify-links">
+        <div class="spotify-row">
+            <div class="spotify-item">
+                <img src="img/spotify.png" alt="Spotify Logo">
+                <a href="https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b?si=6541341481ac4bb2">Blinding Lights - The Weekend</a>
+            </div>
+            <div class="spotify-item">
+                <img src="img/spotify.png" alt="Spotify Logo">
+                <a href="#">Song Title 2</a>
+            </div>
+        </div>
+        <div class="spotify-row">
+            <div class="spotify-item">
+                <img src="img/spotify.png" alt="Spotify Logo">
+                <a href="#">Song Title 3</a>
+            </div>
+            <div class="spotify-item">
+                <img src="img/spotify.png" alt="Spotify Logo">
+                <a href="#">Song Title 4</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide"><img src="crew/A1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="crew/A2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="crew/A3.webp" alt="Image 3"></div>
+                <div class="slide"><img src="crew/A4.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="crew/A5.jpg" alt="Image 5"></div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <div class="team-section">
+        <h2 class="team-title">Meet Our Team</h2>
+        <div class="team-gallery">
+            <div class="team-item">
+                <img src="crew/p1.jpg" alt="Team Member 1">
+            </div>
+            <div class="team-item">
+                <img src="crew/p2.jpg" alt="Team Member 2">
+            </div>
+            <div class="team-item">
+                <img src="crew/p3.jpg" alt="Team Member 3">
+            </div>
+            <div class="team-item">
+                <img src="crew/p4.jpg" alt="Team Member 4">
+            </div>
+            <div class="team-item">
+                <img src="crew/p5.jpg" alt="Team Member 5">
+            </div>
+            <div class="team-item">
+                <img src="crew/p6.jpg" alt="Team Member 6">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Radio Station. All rights reserved.</p>
+    </footer>
+
+ 
+
+    <script>
+        document.addEventListener("scroll", function () {
+            let scrollPos = window.scrollY * 0.3; // Adjust the speed of the background scroll
+            // Update background-position dynamically, keeping it centered
+            document.querySelector(".intro").style.backgroundPosition = `bottom ${scrollPos}px`;
+        });
+    </script>
+    
+    
+    
+
+</body>
+</html>
