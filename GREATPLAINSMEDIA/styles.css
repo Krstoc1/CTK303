@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2b3c64; /* aesthetic blue */
+    text-align: center;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Container styles for scrolling text */
+.scrolling-text-container {
+    position: relative; /* Allow the scroll text to scroll with the page */
+    top: 0; /* Align to the top */
+    left: 0;
+    width: 100%; /* Span the entire width of the page */
+    background-color: #2b3c64;;
+    border-radius: 0;
+    overflow: hidden;
+    z-index: 9999; /* Ensure it stays on top initially */
+    filter: drop-shadow(-5px 1px 11px #000000);
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+    color: #fff; /* Set the text color */
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner > div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner > div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100vw); /* Start off the right side of the page */
+    }
+    100% {
+        transform: translateX(-100%); /* End off the left side of the page */
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100vw); /* Start off the left side of the page */
+    }
+    100% {
+        transform: translateX(100%); /* End off the right side of the page */
+    }
+}
+
+/* Custom properties to control animation direction and speed */
+:root {
+    --direction: scroll-left; /* Change this to scroll-right for reverse direction */
+    --marquee-speed: .1s; /* Change this to adjust speed */
+}
+
+/* Initial nav bar styles */
+nav {
+    position: sticky;
+    top: 0; /* Ensures the nav sticks to the top */
+    width: 100%;
+    background: #3e5188;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 30px 30px;
+    transition: all 0.3s ease; /* Smooth transition for padding, width, and border-radius */
+}
+
+/* Nav menu UL styles to manage width */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    justify-content: flex-end; /* This ensures the menu items are aligned to the right */
+}
+
+/* When the nav becomes sticky, change border-radius and width */
+nav.sticky {
+    border-radius: 0;
+}
+
+/* When the nav is in its initial state, it will have extra padding for a shorter look */
+nav:not(.sticky) {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* When it becomes sticky, remove the padding for full width */
+nav.wide {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Logo positioning */
+nav .logo img {
+    width: 150px; /* Adjust the size of the logo */
+    height: auto;
+    vertical-align: middle; /* Center the logo vertically */
+}
+
+nav ul li {
+    margin-right: 1em;
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+.intro {
+    padding: 5em;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-image: url('img/radiohead.jpg'); 
+    background-size: cover;
+    background-position: bottom; 
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.intro .text-container {
+    background: rgba(20, 30, 60, 0.7); /* bluish overlay */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+
+/*Radio station img edits*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    padding-bottom: 15em;
+  }
+  
+  .imgcolumn {
+    position: relative;
+    width: 32%; /* 4 columns with spacing */
+  }
+  
+  .top-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .overlay-images {
+    width: 100%;
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    position: absolute;
+    top:60%; /* Adjust to control how much it overlaps */
+    right: 2%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 5px;
+  }
+  
+  .overlay-images img {
+    width: 90%;
+    margin-left: -30%; /* creates overlap */
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+  
+  .overlay-images img:first-child {
+    margin-left: 0;
+  }
+
+  .overlay-images img:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+
+
+
+
+.columns-wrapper {
+    background: #3e5188;
+    padding: 10px;
+    margin-left: 5em;
+    margin-right: 5em;
+    box-shadow: 0 0 30px rgba(46, 73, 128, 0.7);
+}
+
+.header2 {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.column {
+    background: rgba(25, 40, 70, 0.7);
+    padding: 15px;
+    flex: 1;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.6s ease;
+}
+
+.column:hover {
+    transform: scale(1.05);
+    background: rgba(25, 40, 70, 0.85);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.spotify-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.spotify-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.spotify-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.spotify-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e0eaff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.spotify-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.spotify-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.slider-container {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider {
+    background: #e0eaff;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    width: 960px;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 5)); }
+}
+
+.slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: calc(250px * 10);
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+    background: linear-gradient(to right, #e0eaff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider::before {
+    left: 0;
+}
+
+.slider::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.team-section {
+    padding: 40px;
+    background-color: #f0f4ff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2b3c64;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.team-item:hover img {
+    transform: scale(1.05);
+}
+
+.team-gallery .team-item:nth-child(odd) {
+    grid-row: span 2;
+}
+
+@media (min-width: 1024px) {
+    .team-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-gallery .team-item:nth-child(odd) {
+        grid-row: span 1;
+    }
+}
+
+footer {
+    background: #1e2a4b;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
