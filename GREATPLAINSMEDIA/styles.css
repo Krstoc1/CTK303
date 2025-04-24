@@ -139,14 +139,12 @@ nav ul li a {
 
 
 .intro {
-    padding-left: 5em;
+    padding-bottom: 7em;
     padding-top: 5em;
-    padding-bottom: 5em;
-    font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 5em;
     background-image: url('img/radiohead.jpg');
     background-size: cover;
-    background-position: bottom; 
+    background-position: center; 
     background-attachment: fixed;
     color: white;
     position: relative;
@@ -160,66 +158,46 @@ nav ul li a {
 
 .slide-columns {
     display: flex;
-    flex-direction: row; /* forces horizontal layout */
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: nowrap; /* prevents stacking on small screens unless you want it */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    padding: 50px 20px;
+    max-width: 1200px;
 }
 
-.intro .text-container {
-    background: rgba(20, 30, 60, 0.7); /* bluish overlay */
+.text-container {
+    background: rgba(20, 30, 60, 0.7);
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
     text-align: center;
     color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%; /* makes it align better with image height */
 }
 
-.text-container{
-    margin-left: 10em;
-    transform: translate(0%, 100%);
-}
-
+/* Removed unnecessary transform */
 .image-stack {
-    position: relative;
-    width: 100%;
-    padding-top: 250px; /* give space for all images */
-    min-height: 300px;
+    min-width: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* All images share these base styles */
 .image-stack img {
-    position: absolute;
-    max-width: 20vw; /* responsive sizing */
+    padding-left: .5em;
+    padding-right: 13em;
+    min-width: 50%;
+    width: 60%;
     height: auto;
+    display: block;
     object-fit: cover;
-    transition: all 0.3s ease;
 }
-
-/* Top image (smallest, centered) */
-.small-img {
-    top: 55%;
-    left: -10%;
-    transform: translate(-50%, 0%);
-}
-
-/* Middle image (wider, offset left) */
-.medium-img {
-    top: 35%;
-    left: 45%;
-    transform: translate(-50%, 0%);
-}
-
-/* Bottom image (widest, offset right) */
-.large-img {
-    top: 10%;
-    left: -5%;
-    transform: translate(-50%, 0%);
-}
-
 
 /*Radio station img edits*/
 .container {
@@ -271,9 +249,6 @@ nav ul li a {
     z-index: 1;
   }
 
-
-
-
 .columns-wrapper {
     background: #3e5188;
     padding: 10px;
@@ -316,106 +291,6 @@ nav ul li a {
     transform: scale(1.05);
     background: rgba(25, 40, 70, 0.85);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-.spotify-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.spotify-links {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.spotify-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.spotify-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #e0eaff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.spotify-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
-.spotify-item img {
-    width: 30px;
-    height: 30px;
-}
-
-.slider-container {
-    width: 100%;
-    margin: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.slider {
-    background: #e0eaff;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-    height: 100px;
-    width: 960px;
-    position: relative;
-    overflow: hidden;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 5)); }
-}
-
-.slide-track {
-    display: flex;
-    animation: scroll 40s linear infinite;
-    width: calc(250px * 10);
-}
-
-.slide {
-    height: 100px;
-    width: 250px;
-    flex-shrink: 0;
-}
-
-.slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slider::before,
-.slider::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 100px;
-    z-index: 2;
-    background: linear-gradient(to right, #e0eaff 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.slider::before {
-    left: 0;
-}
-
-.slider::after {
-    right: 0;
-    transform: rotateZ(180deg);
 }
 
 .team-section {
