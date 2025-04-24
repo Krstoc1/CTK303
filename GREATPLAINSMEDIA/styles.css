@@ -95,6 +95,7 @@ nav {
 
 /* Nav menu UL styles to manage width */
 nav ul {
+    text-shadow:0px 4px 12px rgba(0, 0, 0, 1);
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -198,23 +199,14 @@ nav ul li a {
     display: block;
     object-fit: cover;
 }
-
-/*Radio station img edits*/
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px;
-    padding-bottom: 15em;
-  }
   
   .imgcolumn {
     position: relative;
-    width: 32%; /* 4 columns with spacing */
+    width: 100%;
   }
   
   .top-image {
-    width: 100%;
+    width: 90%;
     display: block;
     border-radius: 10px;
   }
@@ -251,10 +243,13 @@ nav ul li a {
 
 .columns-wrapper {
     background: #3e5188;
+    border-radius: 3px;
     padding: 10px;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 1em;
+    margin-right: 1em;
     box-shadow: 0 0 30px rgba(46, 73, 128, 0.7);
+    margin-bottom: 5em;
+
 }
 
 .header2 {
@@ -271,7 +266,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 40px;
+    padding: 10px;
     margin-bottom: 50px;
 }
 
