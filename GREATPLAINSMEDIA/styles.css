@@ -4,7 +4,7 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2b3c64; /* aesthetic blue */
+    background-color: #002e4d; /* aesthetic blue */
     text-align: center;
     color: white;
     overflow-x: hidden; /* Prevent horizontal scrollbar */
@@ -16,7 +16,7 @@ body {
     top: 0; /* Align to the top */
     left: 0;
     width: 100%; /* Span the entire width of the page */
-    background-color: #2b3c64;;
+    background-color:  #002e4d;
     border-radius: 0;
     overflow: hidden;
     z-index: 9999; /* Ensure it stays on top initially */
@@ -82,7 +82,7 @@ nav {
     position: sticky;
     top: 0; /* Ensures the nav sticks to the top */
     width: 100%;
-    background: #3e5188;
+    background:  #004d80;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -139,10 +139,12 @@ nav ul li a {
 
 
 .intro {
-    padding: 5em;
+    padding-left: 5em;
+    padding-top: 5em;
+    padding-bottom: 5em;
     font-size: 24px;
-    margin-bottom: 20px;
-    background-image: url('img/radiohead.jpg'); 
+    margin-bottom: 30px;
+    background-image: url('img/radiohead.jpg');
     background-size: cover;
     background-position: bottom; 
     background-attachment: fixed;
@@ -156,6 +158,15 @@ nav ul li a {
     font-weight: bold;
 }
 
+.slide-columns {
+    display: flex;
+    flex-direction: row; /* forces horizontal layout */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: nowrap; /* prevents stacking on small screens unless you want it */
+}
+
 .intro .text-container {
     background: rgba(20, 30, 60, 0.7); /* bluish overlay */
     padding: 20px;
@@ -165,6 +176,48 @@ nav ul li a {
     color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     display: block;
+}
+
+.text-container{
+    margin-left: 10em;
+    transform: translate(0%, 100%);
+}
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    padding-top: 250px; /* give space for all images */
+    min-height: 300px;
+}
+
+/* All images share these base styles */
+.image-stack img {
+    position: absolute;
+    max-width: 20vw; /* responsive sizing */
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* Top image (smallest, centered) */
+.small-img {
+    top: 55%;
+    left: -10%;
+    transform: translate(-50%, 0%);
+}
+
+/* Middle image (wider, offset left) */
+.medium-img {
+    top: 35%;
+    left: 45%;
+    transform: translate(-50%, 0%);
+}
+
+/* Bottom image (widest, offset right) */
+.large-img {
+    top: 10%;
+    left: -5%;
+    transform: translate(-50%, 0%);
 }
 
 
